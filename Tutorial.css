@@ -3,3 +3,52 @@ html, body {
     font-family: "Barlow", sans-serif;
     background-color: #E0EDD4;
 }
+
+.terms-box {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 800px; /* Set a maximum width */
+    margin-left: auto;
+    margin-right: auto; /* Center the box horizontally and add some spacing from the top */
+    border: 1px solid #ccc; /* Add a border to the box */
+    padding: 20px; /* Add padding inside the box */
+    background-color: #E0EDD4; /* Set a background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+/*.terms-box h4 {
+    font-size: 24px;
+    margin: 0 0 20px; /* Add spacing below the heading 
+    text-align: center;
+}*
+
+.terms-box p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5; /* Adjust line height for readability 
+    margin: 0 0 10px;
+}
+
+h4 {
+    font-style: bold;
+}
+
+.navbar {
+    background-color:#394D23;
+}
+
+/* Style the navbar brand 
+.navbar-brand {
+    color: #394D23;
+    font-size: 24px;
+}
+
+/* Style the navigation links 
+.nav-link {
+    color: #333;
+}
+
+/* Change the color of active nav items 
+.nav-item.active .nav-link {
+    color: #ff9900;
+}
+*/
