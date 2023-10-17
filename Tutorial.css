@@ -31,24 +31,21 @@ html, body {
 h4 {
     font-style: bold;
 }
-
+*/
 .navbar {
     background-color:#394D23;
 }
 
-/* Style the navbar brand 
 .navbar-brand {
     color: #394D23;
     font-size: 24px;
 }
 
-/* Style the navigation links 
+
 .nav-link {
     color: #333;
 }
 
-/* Change the color of active nav items 
 .nav-item.active .nav-link {
     color: #ff9900;
 }
-*/
