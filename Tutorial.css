@@ -1,3 +1,5 @@
-body {
-    
+html, body {
+    @import url(https://fonts.googleapis.com/css?family=Barlow:300,400,600);
+    font-family: "Barlow", sans-serif;
+    background-color: #E0EDD4;
 }
