@@ -1,10 +1,18 @@
-html, body {
-    @import url(https://fonts.googleapis.com/css?family=Barlow:300,400,600);
-    font-family: "Barlow", sans-serif;
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+		font-family: Barlow, sans-serif;    
     background-color: #E0EDD4;
 }
 
-.terms-box {
+
+/* make sure to add background color depending on the mode
+background-color: #E0EDD4; -> light mode
+background-color: #342D2D; -> dark mode
+ */
+
+.Tutorial-Box {
     width: 100%; /* Adjust the width as needed */
     max-width: 800px; /* Set a maximum width */
     margin-left: auto;
@@ -13,39 +21,48 @@ html, body {
     padding: 20px; /* Add padding inside the box */
     background-color: #E0EDD4; /* Set a background color */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    
 }
 
-/*.terms-box h4 {
+.terms-box h4 {
     font-size: 24px;
-    margin: 0 0 20px; /* Add spacing below the heading 
+    margin: 0 0 20px; /* Add spacing below the heading */
     text-align: center;
-}*
+}
 
-.terms-box p {
+.Tutorial-Box p {
     text-align: center;
     font-size: 16px;
-    line-height: 1.5; /* Adjust line height for readability 
+    line-height: 1.5;  
     margin: 0 0 10px;
 }
 
-h4 {
+h1 {
+    text-align: center;
     font-style: bold;
 }
-*/
-.navbar {
-    background-color:#394D23;
+
+.navbar-brand img {
+    height: auto;
+    width: auto;
+    max-height: 100px;
+    max-width: 100px;
 }
 
-.navbar-brand {
-    color: #394D23;
-    font-size: 24px;
+.navbar{
+    background-color: #c8d7b9;
 }
 
-
-.nav-link {
-    color: #333;
+.Video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-item.active .nav-link {
-    color: #ff9900;
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
