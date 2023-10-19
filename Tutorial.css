@@ -19,7 +19,7 @@ background-color: #342D2D; -> dark mode
     margin-right: auto; /* Center the box horizontally and add some spacing from the top */
     border: 1px solid #ccc; /* Add a border to the box */
     padding: 20px; /* Add padding inside the box */
-    background-color: #E0EDD4; /* Set a background color */
+    background-color: white; /* Set a background color */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
     
 }
@@ -35,6 +35,7 @@ background-color: #342D2D; -> dark mode
     font-size: 16px;
     line-height: 1.5;  
     margin: 0 0 10px;
+ 
 }
 
 h1 {
