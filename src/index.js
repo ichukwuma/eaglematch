@@ -5,7 +5,6 @@ const collection = require("./config")
 
 const app = express()
 
-
 //convert data into JSON method
 app.use(express.json())
 
@@ -27,11 +26,6 @@ app.get("/login", (req, res) => {
 app.get("/register", (req, res) => {
     res.render("register")
 })
-
- //check conditions for email and password when we register
-    //check for dup user
-    
-
 
 //this registers the user
 app.post("/register", async (req, res) =>{
@@ -72,16 +66,17 @@ app.post("/register", async (req, res) =>{
             passwordLengthAlert
         })
     }
-    
-    
-    
 
-    
-    /*else{
+    //else statement that will now store the students email and password (hashed) into the database
+    else{
+        const numOfSaltRounds = 10;
+        const hashedPassword = await bcrypt.hash(data.password, numOfSaltRounds)
+
+        data.password = hashedPassword //this replaces og password with the hashed password
+
         const userdata = await collection.insertMany(data)
-        console.log(userdata)
-    }*/
-
+        console.log(userdata) 
+    }
 })
 
  
