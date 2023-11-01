@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+
+    <!--Bootstrap stylesheets-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
+
+    <!--script links-->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--login-register stylesheet-->
+    <link rel="stylesheet" href="/login-register.css">
+</head>
+<body>
+
+<div class="container col-md-6" id="container-login">
+    <div class="card">
+      <div class="card-header">
+        Login
+      </div>
+        <div class="card-body">
+
+<!--actual form code here-->
+          <form action="/login" method="post" id="login-form">
+            <div class="form-group row">
+                <label for="email" class="col-md-3 col-form-label">UNT E-Mail Address:</label>
+                <div class="col-md-7">
+                  <input type="text" id="email" name="email" placeholder="Enter your email" required autocomplete="off" class="form-control">
+                </div>
+              </div>
+
+              <div class="half-line"></div>
+              
+  
+              
+                <div class="form-group row">
+                  <label for="password" class="col-md-3 col-form-label">Password</label>
+                  <div class="col-md-7">
+                    <input class="form-control" name="password" type="password" name="password" id="password" placeholder="password" required>
+                  </div>
+               </div>
+          <!--submit button here-->
+               <div class="col-md-6 offset-md-4">
+                <button type="submit" class="submit-btn">Login</button> 
+               </div>
+                
+              </div>
+          </form>
+          <p>Don't have an account? <a class="link-color" href="/register">Register here</a></p>
+        </div>
+      </div>
+
+     
+</body>
+</html>
