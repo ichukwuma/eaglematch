@@ -28,9 +28,12 @@ app.get("/register", (req, res) => {
     res.render("register")
 })
 
+ //check conditions for email and password when we register
+    //check for dup user
+    
+
 
 //this registers the user
-
 app.post("/register", async (req, res) =>{
     const data = {
         email: req.body.email,
@@ -38,7 +41,14 @@ app.post("/register", async (req, res) =>{
     }
 
     //check conditions for email and password when we register
-    const duplicateUser = await collection.findOne({email: data.email})
+    //check for dup user
+   const duplicateUser = await collection.findOne({email: data.email})
+   
+   //check for email that doesn't end with @my.unt.edu
+   var untEmailCheck = new RegExp(/^\w+([\.-]?\w+)*@[my.unt.edu]/)
+
+   //check if password length is less than 8 characters
+   const passwordLengthCheck = data.password.length
 
     //check if user exsist
     if(duplicateUser){
@@ -47,11 +57,30 @@ app.post("/register", async (req, res) =>{
         res.render('register', {
             dupEmailAlert
         })
+    } 
+    
+    if(!data.email.match(untEmailCheck)){
+        const notUNTEmail = 'Please register with your UNT Student Email'
+        res.render('register', {
+            notUNTEmail
+        })
+    }
+    
+    if(passwordLengthCheck <= 7 ){
+        const passwordLengthAlert = 'Password requires a minimum of 8 characters'
+        res.render('register', {
+            passwordLengthAlert
+        })
+    }
+    
+    
+    
 
-    }  else{
+    
+    /*else{
         const userdata = await collection.insertMany(data)
         console.log(userdata)
-    }
+    }*/
 
 })
 

@@ -34,6 +34,7 @@
         <div class="card-body">
     
 
+          <!--ERROR MESSAGES WILL SHOW UP ONE AT A TIME , SO IF U KNOW A WAY TO SHOW ERROR MESSAGES BASED ON WHICH ONE FAILED TEST IT OUT-->
           <!--displays duplicate email error-->
           <% if(typeof dupEmailAlert != 'undefined'){ %>
             <div class="alert alert-danger d-flex align-items-center" role="alert">
@@ -41,8 +42,20 @@
             </div>
           <% } %>
 
-          <!--displays if password length is shorter than 8 characters error -->
-          
+          <!--checks if email ends with @my.unt.edu-->
+          <% if(typeof  notUNTEmail != 'undefined'){ %>
+            <div class="alert alert-danger d-flex align-items-center" role="alert">
+              <%= notUNTEmail %> 
+            </div>
+          <% } %>
+
+
+           <!--checks if password-->
+           <% if(typeof  passwordLengthAlert != 'undefined'){ %>
+            <div class="alert alert-danger d-flex align-items-center" role="alert">
+              <%= passwordLengthAlert %> 
+            </div>
+          <% } %>
         
 
         <!--actual form code here-->

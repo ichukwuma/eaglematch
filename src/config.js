@@ -17,8 +17,8 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:[true, "Email address field is empty"],
         unique:true,
-        lowercase:true,
-        match: [/^\w+([\.-]?\w+)*@[my.unt.edu]/, 'Please enter your UNT Student email address']
+        lowercase:true
+        //match: [/^\w+([\.-]?\w+)*@[my.unt.edu]/, 'Please enter your UNT Student email address']
     },
     password:{
         type:String,
