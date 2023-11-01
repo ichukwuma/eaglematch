@@ -60,7 +60,7 @@ app.post("/register", async (req, res) =>{
         })
     }
     
-    if(passwordLengthCheck <= 7 ){
+    else if(passwordLengthCheck <= 7 ){
         const passwordLengthAlert = 'Password requires a minimum of 8 characters'
         res.render('register', {
             passwordLengthAlert
