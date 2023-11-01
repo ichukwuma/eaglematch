@@ -97,20 +97,19 @@ app.post("/login", async (req, res)=>{
             res.render('login', {
                 notUserAlert
             })
-            //res.send("User cannot be found")
         }
 
         //compare hashpassword from our DB
-        //const checkPassword = await bcrypt.compare(req.body.password, checkUser.password)
-        //if(checkPassword){
-          //  res.render('home')
-      //  }else{
-            //const incorrectPasswordAlert = 'Incorrect password'
-            //res.render('login', {
-               // incorrectPasswordAlert
-            //})
+        const checkPassword = await bcrypt.compare(req.body.password, checkUser.password)
+        if(checkPassword){
+          res.render('home')
+        }else{
+            const incorrectPasswordAlert = 'Incorrect password'
+            res.render('login', {
+               incorrectPasswordAlert
+            })
                //res.send("Incorrect password")
-       // }
+        }
 })
 
 
