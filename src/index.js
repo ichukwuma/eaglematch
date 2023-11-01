@@ -5,11 +5,12 @@ const collection = require("./config")
 
 const app = express()
 
+
 //convert data into JSON method
 app.use(express.json())
 
-app.use(express.urlencoded({extended: false}))
 
+app.use(express.urlencoded({extended: false}))
 
 //use ejs to for the view engine
 app.set('view engine', 'ejs')
@@ -17,15 +18,19 @@ app.set('view engine', 'ejs')
 //static folder for out login-register file
 app.use(express.static("public"))
 
-app.get("/", (req, res) => {
+// type localhost:5501/login in your browser and this should pop up login
+app.get("/login", (req, res) => {
     res.render("login")
 })
 
+// type localhost:5501/register in your browser and this should pop up register
 app.get("/register", (req, res) => {
     res.render("register")
 })
 
+
 //this registers the user
+
 app.post("/register", async (req, res) =>{
     const data = {
         email: req.body.email,
@@ -34,23 +39,23 @@ app.post("/register", async (req, res) =>{
 
     //check if user exsist
     const duplicateUser = await collection.findOne({email: data.email})
-
     if(duplicateUser){
-        res.send("User email already exists.")
+        //res.send("User email already exists.")
+        const alert = 'User email already exsist'
+        res.render('register', {
+            alert
+        })
     } else{
-        //hash the user password using bcrypt
-        const hashP = 10
-        const hashedP = await bcrypt.hash(data.password, hashP)
-
-        //replace password with hashed password
-        data.password = hashedP 
         const userdata = await collection.insertMany(data)
         console.log(userdata)
     }
 
 })
 
+ 
 
+
+/*
 //Login user
 app.post("/login", async (req, res)=>{
     try{
@@ -73,6 +78,9 @@ app.post("/login", async (req, res)=>{
 
 })
 
+*/
+
+//port we're listning on
 app.listen(5501, () => {
     console.log("Server running port: 5501")
 })

@@ -14,24 +14,41 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+
     <!--login-register stylesheet-->
     <link rel="stylesheet" href="/login-register.css">
 </head>
 <body>
 
 <div class="container col-md-6" id="container-register">
+
+
+
+
+
     <div class="card">
+      
       <div class="card-header">
         Register
       </div>
         <div class="card-body">
+    
 
-<!--actual form code here-->
-          <form action="/register" method="post" id="register-form">
+          <!--displays duplicate email error-->
+          <% if(typeof alert != 'undefined'){ %>
+            <div class="alert alert-danger d-flex align-items-center" role="alert">
+              <%= alert %> 
+            </div>
+          <% } %>
+
+        
+
+        <!--actual form code here-->
+          <form action="/register" method="POST" id="register-form">
             <div class="form-group row">
                 <label for="email" class="col-md-3 col-form-label">UNT E-Mail Address:</label>
                 <div class="col-md-7">
-                  <input type="text" id="email" name="email" placeholder="Enter your email" required autocomplete="off" class="form-control">
+                  <input type="email" id="email" name="email" required autocomplete="off" class="form-control">
                 </div>
               </div>
 
@@ -42,19 +59,26 @@
                 <div class="form-group row">
                   <label for="password" class="col-md-3 col-form-label">Password</label>
                   <div class="col-md-7">
-                    <input class="form-control" name="password" type="password" name="password" id="password" placeholder="password" required>
+                    <input class="form-control" name="password" type="password" name="password" id="password" required>
                   </div>
                </div>
+
+
           <!--submit button here-->
                <div class="col-md-6 offset-md-4">
                 <button type="submit" class="submit-btn">Register</button> 
                </div>
-                
+           
               </div>
           </form>
-          <p>Have an account? <a class="link-color" href="/">Login here</a></p>
+
+          <div class="half-line"></div>
+          <p>Have an account? <a class="link-color" href="/login">Login here</a></p>
         </div>
       </div>
+
+    
+    
 
      
 </body>
