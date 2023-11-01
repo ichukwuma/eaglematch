@@ -37,15 +37,18 @@ app.post("/register", async (req, res) =>{
         password: req.body.password
     }
 
-    //check if user exsist
+    //check conditions for email and password when we register
     const duplicateUser = await collection.findOne({email: data.email})
+
+    //check if user exsist
     if(duplicateUser){
         //res.send("User email already exists.")
-        const alert = 'User email already exsist'
+        const dupEmailAlert = 'User email already exsist'
         res.render('register', {
-            alert
+            dupEmailAlert
         })
-    } else{
+
+    }  else{
         const userdata = await collection.insertMany(data)
         console.log(userdata)
     }

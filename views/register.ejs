@@ -35,12 +35,14 @@
     
 
           <!--displays duplicate email error-->
-          <% if(typeof alert != 'undefined'){ %>
+          <% if(typeof dupEmailAlert != 'undefined'){ %>
             <div class="alert alert-danger d-flex align-items-center" role="alert">
-              <%= alert %> 
+              <%= dupEmailAlert %> 
             </div>
           <% } %>
 
+          <!--displays if password length is shorter than 8 characters error -->
+          
         
 
         <!--actual form code here-->
