@@ -82,30 +82,38 @@ app.post("/register", async (req, res) =>{
  
 
 
-/*
+
 //Login user
 app.post("/login", async (req, res)=>{
-    try{
-        const checkUser = await collection.findOne({email: req.body.email})
-        if(!check){
-            res.send("User cannot be found")
+
+    const data2 = {
+        email: req.body.email,
+        password: req.body.password
+    } 
+        const checkUser = await collection.findOne({email: data2.email})
+
+        if(!checkUser){
+            const notUserAlert = 'User cannot be found'
+            res.render('login', {
+                notUserAlert
+            })
+            //res.send("User cannot be found")
         }
 
         //compare hashpassword from our DB
-        const checkPassword = await bcrypt.compare(req.body.password, check.password)
-        if(checkPassword){
-            res.render("home")
-        }else{
-            res.send("Incorrect password")
-        }
-    }
-    catch{
-        res.send("wrong details")
-    }
-
+        //const checkPassword = await bcrypt.compare(req.body.password, checkUser.password)
+        //if(checkPassword){
+          //  res.render('home')
+      //  }else{
+            //const incorrectPasswordAlert = 'Incorrect password'
+            //res.render('login', {
+               // incorrectPasswordAlert
+            //})
+               //res.send("Incorrect password")
+       // }
 })
 
-*/
+
 
 //port we're listning on
 app.listen(5501, () => {

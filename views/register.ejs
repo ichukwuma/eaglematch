@@ -50,13 +50,14 @@
           <% } %>
 
 
-           <!--checks if password-->
+           <!--checks password length-->
            <% if(typeof  passwordLengthAlert != 'undefined'){ %>
             <div class="alert alert-danger d-flex align-items-center" role="alert">
               <%= passwordLengthAlert %> 
             </div>
           <% } %>
-        
+       
+          
 
         <!--actual form code here-->
           <form action="/register" method="POST" id="register-form">

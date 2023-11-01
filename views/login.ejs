@@ -26,6 +26,13 @@
       </div>
         <div class="card-body">
 
+           <!--Not a user alert-->
+           <% if(typeof  notUserAlert != 'undefined'){ %>
+            <div class="alert alert-danger d-flex align-items-center" role="alert">
+              <%= notUserAlert %> 
+            </div>
+          <% } %> 
+
 <!--actual form code here-->
           <form action="/login" method="post" id="login-form">
             <div class="form-group row">
