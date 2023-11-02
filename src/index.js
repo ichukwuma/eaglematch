@@ -86,11 +86,15 @@ app.post("/register", async (req, res) =>{
 //Login user
 app.post("/login", async (req, res)=>{
 
-    const data2 = {
+   /* const data2 = {
         email: req.body.email,
         password: req.body.password
     } 
-        const checkUser = await collection.findOne({email: data2.email})
+    */
+        const checkUser = await collection.findOne({email: req.body.email})
+
+        //compare hashpassword from our DB
+        const checkPassword = await bcrypt.compare(req.body.password, checkUser.password)
 
         if(!checkUser){
             const notUserAlert = 'User cannot be found'
@@ -99,9 +103,7 @@ app.post("/login", async (req, res)=>{
             })
         }
 
-        //compare hashpassword from our DB
-        const checkPassword = await bcrypt.compare(req.body.password, checkUser.password)
-        if(checkPassword){
+        else if(checkPassword){
           res.render('home')
         }else{
             const incorrectPasswordAlert = 'Incorrect password'
