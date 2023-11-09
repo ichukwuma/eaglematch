@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow:300,400,600);
+
+body{
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #2E4214;
+    text-align: left;
+    background-color: #E0EDD4;
+    font-family: Barlow, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* Navbar Style */
+.navbar-brand img {
+  height: auto;
+  width: auto;
+  max-height: 100px;
+  max-width: 100px;
+}
+
+/* add this in case the background color won't show up when u type it
+inside of the html code */
+.navbar{
+  background-color: #c8d7b9;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+ 
+}
+
+
+
+/*login and registration css that is common among them*/
+/*card stuff*/
+.card-header
+{
+    color: #2E4214;
+    background-color: #c8d7b9;
+    text-align: center;
+}
+.card {
+  background-color: white;
+    flex-grow: 0.4;
+}
+
+
+#login-form, #register-form
+{
+    font-family: Barlow, sans-serif;
+}
+
+/* below is for register css */
+.my-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.my-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+#container-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* below is for login css*/
+
+
+.submit-btn{
+  color: #394D23;
+    margin-top: 20px;
+    background-color: #c8d7b9;
+    margin-left: 40px;
+    border-radius: 12px;
+    
+}
+
+ 
+  .submit-btn:hover {
+    background-color: #2E4214;
+    color: #c8d7b9;
+  }
+  
+  .link-color{
+    color:#394D23;
+  }
+  
+  #container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+  }
+
+  .half-line {
+    height: 0.5em; 
+    }
+  .account-text {
+
+    font-family: Barlow, sans-serif;
+    margin-left: 15px;
+
+  }
+  
