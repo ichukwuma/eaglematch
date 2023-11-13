@@ -29,6 +29,26 @@ body{
     bottom: 0;
     width: 100%;
     text-align: center;
+    color: #342D2D;
+    background-color:#c8d7b9;
     
   }
 
+/*For search bar label, label below the search bar on home page*/
+#search-bar-label-css{
+  padding-top: 30px;
+    color: #342D2D;
+    font-style: italic;
+    font-weight: 800;
+}
+#h3-search-bar-label{
+  padding-top: 20px;
+  color: #342D2D;
+  font-weight: 500; 
+}
+
+.container{
+  padding-top: 300px;
+  width: 100%;
+  text-align: center;
+}
