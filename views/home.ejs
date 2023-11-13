@@ -5,20 +5,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+     <!--jquery and js for select2 JQUERY MUST ALWAYS BE ON TOP-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+  
     <!--Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!--Select 2 CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet">
 
     <!--Script: Boostrap bundle including popper js-->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+    <script>
+      $(document).ready(function() {
+          $('#select-field').select2();
+      });
+    </script>
+  
+  
+    
+
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!--Home page and search page CSS-->
     <link rel="stylesheet" href="home-search.css">
-
 
     <!--Title of page-->
     <title>Eagle Match Home Page</title>
@@ -26,7 +41,8 @@
 
 <body>
     <!--Home Page Nav Bar: -->
-    <nav class="navbar navbar-expand-lg">
+    <header>
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="/home">Eagle Match</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,74 +92,105 @@
           </div>
         </div>
       </nav>
+    </header>
 
 
+    <img src="./public/freedom-america.gif">
+
+    <!-- Home Page Search Bar: -->
+
+          <div class="container">
+            <!--Select group with search bar and actual tags-->
+            <div class="mb-3">
+            <select class="form-select form-select-lg" data-placeholder="Click here to begin your search" id="select-field" multiple>
+              <optgroup label="Noise:">
+              <option value="quiet">Quiet</option>
+              <option value="noisy">Noisy</option>
+              <option value="mild-noise">Mild noise</option>
+              </optgroup>
 
 
-    <!-- Home Page Search Bar:
-    
-    <select class="home-search-bar" name="user-tags[]" multiple="multiple">
+              <optgroup label="Personality:">
+                <option value="introvert">Introvert</option>
+                <option value="extrovert">Extrovert</option>
+                <option value="ambivert">Ambivert</option>
+              </optgroup>
+            
+      
+              <optgroup label="Most Time Spent:">
+              <option value="outside">Outside the house</option>
+              <option value="inside">Inside all day</option>
+              <option value="out-in">Outside&Inside equally</option>
+              </optgroup>
 
 
-        <option value="quiet">Quiet</option>
-        <option value="noisy">Noisy</option>
-        <option value="mild-noise">Mild noise</option>
+              <optgroup label="Pets:">
+              <option value="pet-friendly">Pet friendly</option>
+              <option value="specific-pet">Specific type of pet only</option>
+              <option value ="don't-touch">Don't touch my stuff (please)</option>
+              </optgroup>
+      
+              <optgroup label="Cleanliness:">
+              <option value="clean">Very clean (daily)</option>
+              <option value="clean-occ">Clean occasionally</option>
+              <option value="don't-mind-a-mess">Doesn't mind a mess</option>
+              </optgroup>
 
-        <option value="introvert">Introvert</option>
-        <option value="extrovert">Extrovert</option>
-        <option value="ambivert">Ambivert</option>
+              <optgroup label="Having Guests Over:">
+              <option value="frequent-guests">Frequent guests</option>
+              <option value="occasional-guests">Occasional guests</option>
+              <option value="no-guests">No guests</option>
+              </optgroup>
 
-        <option value="outside">Outside the house</option>
-        <option value="inside">Inside all day</option>
-        <option value="out-in">Outside&Inside equally</option>
+      
+              <optgroup label="Early Morning Bird or Night Owl:">
+                <option value="early-mornings">Early mornings</option>
+                <option value="mid-day">Mid-Day</option>
+                <option value="night-owl">Night owl</option>
+              </optgroup>
+          
+              <optgroup label="Bed Time:">
+              <option value="9PM-10PM">9PM-10PM</option>
+              <option value="10PM-12AM">10PM-12AM</option>
+              <option value ="after-midnight">After midnight</option>
+              </optgroup>
+      
+              <optgroup label="Commute From UNT Campus:">
+              <option value="20mins">Up to 20 minutes</option>
+              <option value="30mins">Up to 30 minutes</option>
+              <option value="40+mins">40+ minutes</option>
+              </optgroup>
 
-        <option value="pet-friendly">Pet friendly</option>
-        <option value="specific-pet">Specific type of pet only</option>
-        <option value ="don't-touch">Don't touch my stuff (please)</option>
+              
+              <optgroup label="Rent:">
+              <option value="rent400">$400 - $600</option>
+              <option value="rent600">$600 - $800</option>
+              <option value="rent800">$800 - $1000</option>
+              </optgroup>
 
-        <option value="clean">Very clean (daily)</option>
-        <option value="clean-occ">Clean occasionally</option>
-        <option value="don't-mind-a-mess">Doesn't mind a mess</option>
-   
-
-        <option value="frequent-guests">Frequent guests</option>
-        <option value="occasional-guests">Occasional guests</option>
-        <option value="no-guests">No guests</option>
-
-        <option value="early-mornings">Early mornings</option>
-        <option value="mid-day">Mid-Day</option>
-        <option value="night-owl">Night owl</option>
-
-        <option value="9PM-10PM">9PM-10PM</option>
-        <option value="10PM-12AM">10PM-12AM</option>
-        <option value ="after-midnight">After midnight</option>
-
-        <option value="20mins">Up to 20 minutes</option>
-        <option value="30mins">Up to 30 minutes</option>
-        <option value="40+mins">40+ minutes</option>
-
-        <option value="rent400">$400 - $600</option>
-        <option value="rent600">$600 - $800</option>
-        <option value="rent800">$800 - $1000</option>
-
-        <option value="outside">ASAP</option>
-        <option value="inside">2-3 Months</option>
-        <option value="out-in">6 Months - 1yr+</option>
-
+              <optgroup label="Preferred Move-in Date:">
+              <option value="asap">ASAP</option>
+              <option value="2-3months">2-3 Months</option>
+              <option value="6months">6 Months - 1yr+</option>
+              </optgroup>
+            </select>
+            <!--Button for search submit-->
+            <button class="btn btn-outline-secondary" type="button" id="user-tags-search-submit">Search</button>
+            <!--Label for search bar-->
+            <div id="search-label">
+              <h1 id="search-bar-label-css">
+              <label for="select-field">Find Your Eagle Match!</label>
+              </h1>
+              <h3 id="h3-search-bar-label">Find your perfect roommate with one simple search.</h3>
+            </div>
+            </div> <!--div for select-->
+            </div><!--div for select tag and label for search bar-->
+        
      
-
-        <option>Very clean</option>
-
-        <option>Very clean</option>
-
-
-      </select>
-
-    -->
 
     <!--Home Page Footer:-->
   <footer class="footer text-lg-start">
-    <div class="text-center p-3" style="background-color:#c8d7b9">
+    <div class="text-center p-3">
         <!--links in footer section-->
         <section class="">
             <div class= "row">
@@ -164,8 +211,11 @@
                 </div>
             </div>
         </section>
-    </div>
   </footer>
+
+
+
+
 
 </body>
 </html>
