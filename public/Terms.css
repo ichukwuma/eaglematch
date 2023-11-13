@@ -1,0 +1,109 @@
+/* Original Body Style*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+	  font-family: Barlow, sans-serif;
+    background-color: #E0EDD4;
+}
+
+/* Navbar Logo Style */
+.navbar-brand img {
+  height: auto;
+  width: auto;
+  max-height: 100px;
+  max-width: 100px;
+}
+
+/* add this in case the background color won't show up when u type it
+inside of the html code */
+.navbar{
+  background-color: #c8d7b9;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  color: #342D2D;
+}
+
+/* Icon Styling */
+.bi{
+  color: #342D2D;
+  }
+
+/* Light and Dark Mode Toggle Button Style */
+button{
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+
+}
+
+
+/*MAIN CONTENT STYLE CLASSES */
+
+/* Main Content Style*/
+main{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+
+/* Dark Mode Style */
+.dark{
+  background-color: #342D2D;
+  color: #E0EDD4;
+  
+  }
+
+/* Page Title Style */
+
+/* Heading Style */
+h1{
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+/* Heading and Content Style */
+
+.subheading1{
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+.subheading{
+  text-align: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 600;
+}
+
+.content{
+  text-align: left;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: large;
+  padding-bottom: 0.5rem;
+}
+
+
+
+/* Footer Style */
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  
+}
+
+/* make sure to add background color depending on the mode
+background-color: #E0EDD4; -> light mode
+background-color: #342D2D; -> dark mode
+ */
