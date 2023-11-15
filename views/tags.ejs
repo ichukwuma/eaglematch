@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tags</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--Bootstrap stylesheets-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
+
+    <!--script links-->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--login-register stylesheet-->
+    <link rel="stylesheet" href="/tags.css">
+</head>
+<body>
+
+        <!--header-->
+        <div class="header-div"></div>
+        <div class="container-fluid py-5">
+            <h2 class="font-weight-light">Choose what best describes you: </h2>
+            <div class="d-flex flex-nowrap overflow-auto">
+        <div id="main">
+        
+        <div class="card-container">
+                <div class="card">
+                    <div class="card-header">
+                        Noise
+                    </div>
+
+                    <form action="/tags" method="POST">
+
+                    <!--- Noise Card-->
+                    <div class="card-body text-center">
+                        <h5 class="card-title">What's your noise level like?</h5>
+                        <div class="buttons">
+                            <input type="radio" id="noise" name="tags" value="quiet">
+                            <label for="noise"><i class="fa-solid fa-volume-xmark"></i>Quiet</label>
+                          
+                            <input type="radio" id="noise2" name="tags" value="noisy">
+                            <label for="noise2"><i class="fa-solid fa-volume-low"></i> Noisy</label>
+                          
+                            <input type="radio" id="noise3" name="tags" value="both-noise">
+                            <label for="noise3"><i class="fa-solid fa-volume-off"></i>Mild noise</label>
+
+
+
+                          </div>
+                        
+                    </div>
+                </div>
+                <button type="submit" onClick="save_tags()" class="submit-btn">Submit</button> 
+            </form>
+
+            
+
+                <!---script for noise button-->
+                <!---Results from the card needs to be "gotten" before saving into DB-->
+
+                <script>
+
+function save_tags() {
+    // Get the selected radio button value
+    var selectedValue = document.querySelector('input[name="tags"]:checked');
+    console.log(selectedValue);
+
+    if (selectedValue) {
+        // Send the selected value to your server (e.g., via AJAX)
+        fetch('/save_tags', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ tag: selectedValue.value }),
+        })
+        .then(response => response.json())
+        .then(data => console.log('Success:', data))
+        .catch(error => console.error('Error:', error));
+    } else {
+        console.error('No radio button selected.');
+    }
+}
+
+
+
+
+
+                </script>
+        
+                <div class="card">
+                    <div class="card-header">
+                        Personality
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">What best describes your personality?</h5>
+                        
+                        <div class="buttons">
+                            <input type="radio" id="personality1" name="personality" value="introvert" >
+                            <label for="personality1"> <i class="fa-solid fa-book-open-reader"></i>Introvert</label>
+                          
+                            <input type="radio" id="personality2" name="personality" value="extrovert">
+                            <label for="personality2"><i class="fa-solid fa-champagne-glasses"></i>Extrovert</label>
+                          
+                            <input type="radio" id="personality3" name="personality" value="both-personality">
+                            <label for="personality3"><i class="fa-solid fa-face-smile"></i>Ambivert</label>
+
+                          </div>
+                    </div>
+                </div>
+        
+                
+        
+                <div class="card">
+                    <div class="card-header">
+                        Time Spent
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Most time spent...</h5>
+                        
+                        <div class="buttons">
+                            <input type="radio" id="timespent1" name="time" value="outside-the-house" >
+                            <label for="timespent1"><i class="fa-solid fa-person-hiking"></i> Outside the house</label>
+                          
+                            <input type="radio" id="timespent2" name="time" value="inside-all-day">
+                            <label for="timespent2"><i class="fa-solid fa-house"></i>Inside all day</label>
+                          
+                            <input type="radio" id="timespent3" name="time" value="both-time-spent">
+                            <label for="timespent3"><i class="fa-solid fa-map"></i>Outside&Inside equally</label>
+                          </div>     
+                    </div>
+                </div>
+            </div> <!--end of card container div for 3 cards-->
+              
+               <div class="card-container">
+                <div class="card">
+                    <div class="card-header">
+                        Pets
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Any Pets?</h5>
+                        <div class="buttons">
+                            <input type="radio" id="pets1" name="pets" value="pet-friendly" >
+                            <label for="pets1"><i class="fa-solid fa-paw"></i> Pet friendly</label>
+        
+                            <input type="radio" id="pets2" name="pets" value="specific-pets" >
+                            <label for="pets2"><i class="fa-solid fa-bowl-food"></i> Specific type of pet only</label>
+                                
+                            <input type="radio" id="pets3" name="pets" value="no-pets" >
+                            <label for="pets3"><i class="fa-solid fa-ban"></i> No pets</label>
+                          </div>
+                    </div>
+                </div>
+                
+        
+        
+                <div class="card">
+                    <div class="card-header">
+                        Shared Items
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">How do you feel about sharing?</h5>
+                        <div class="buttons">
+                            <input type="radio" id="shared1" name="shared" value="sharing" >
+                            <label for="shared1"> <i class="fa-solid fa-handshake"></i> "Sharing is caring"</label>
+        
+                            <input type="radio" id="shared2" name="shared" value="ask-to-share" >
+                            <label for="shared2"> <i class="fa-solid fa-question"></i> Just ask</label>
+                                 
+                            <input type="radio" id="shared3" name="shared" value="no-shared-items" >
+                            <label for="shared3"><i class="fa-solid fa-ban"></i> Don't touch my stuff</label>
+                        </div>
+                                      
+                    </div>
+                </div>
+        
+        
+        
+                <div class="card">
+                    <div class="card-header">
+                        Cleanliness
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">How clean are you?</h5>
+                        <div class="buttons">
+                            <input type="radio" id="clean1" name="clean" value="very-clean" >
+                            <label for="clean1"><i class="fa-solid fa-spray-can-sparkles"></i> Very clean (daily)</label>
+                                
+                            <input type="radio" id="clean2" name="clean" value="clean-occasionally" >
+                            <label for="clean2"><i class="fa-solid fa-hand-sparkles"></i> Clean occasionally</label>
+                                
+                            <input type="radio" id="clean3" name="clean" value="messy" >
+                            <label for="clean3"> <i class="fa-solid fa-broom"></i> Doesn't mind a mess </label>
+                        </div>
+                                       
+                    </div>
+                </div>
+            </div> <!--end of card container div for 3 cards-->
+        
+        
+        <div class="card-container">
+                <div class="card">
+                    <div class="card-header">
+                        Guests
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">How do you feel about having guests?</h5>
+                        <div class="buttons">
+                            <input type="radio" id="guests1" name="guests" value="frequent-guests" >
+                            <label for="guests1"><i class="fa-solid fa-people-group"></i> Frequent guests</label>
+                                
+                            <input type="radio" id="guests2" name="guests" value="occasionally-guests" >
+                            <label for="guests2"><i class="fa-solid fa-person"></i> Occasional guests </label>
+                                
+                            <input type="radio" id="guests3" name="guests" value="no-guests" >
+                            <label for="guests3"><i class="fa-solid fa-ban"></i> No guests</label>
+                        </div>               
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <div class="card-header">
+                        Schedule
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">When does your day start?</h5>
+                        <div class="buttons">
+                            <input type="radio" id="schedule1" name="schedule" value="early-mornings" >
+                            <label for="schedule1"><i class="fa-solid fa-dove"></i> Early mornings</label>
+                                
+                            <input type="radio" id="schedule2" name="schedule" value="mid-days" >
+                            <label for="schedule2"><i class="fa-regular fa-sun"></i>Mid-Day</label>
+                                
+                            <input type="radio" id="schedule3" name="schedule" value="night-owl" >
+                            <label for="schedule3"><i class="fa-solid fa-moon"></i> Night owl</label>
+                        </div>
+                    </div>
+                </div>
+        
+        
+        <div class="card">
+            <div class="card-header">
+                Sleep
+            </div>
+            <div class="card-body text-center">
+                <h5 class="card-title">When do you sleep?</h5>
+                <div class="buttons">
+                    <input type="radio" id="sleep1" name="sleep" value="9PM-10PM-Or-earlier" >
+                    <label for="sleep1"><i class="fa-solid fa-bed"></i> 9PM-10PM (Or earlier)</label>
+                        
+                    <input type="radio" id="sleep2" name="sleep" value="10PM-12AM" >
+                    <label for="sleep2"><i class="fa-solid fa-mattress-pillow"></i>10PM-12AM</label>
+                        
+                    <input type="radio" id="sleep3" name="sleep" value="After-Midnight" >
+                    <label for="sleep3"><i class="fa-solid fa-bed-pulse"></i> After midnight</label>
+                </div>
+            </div>
+        </div>
+        </div> <!--end of card container div for 3 cards-->
+        
+        <div class="card-container">
+        <div class="card">
+            <div class="card-header">
+                Commute
+            </div>
+            <div class="card-body text-center">
+                <h5 class="card-title">How much time are you willing to commute to UNT?</h5>
+                <div class="buttons">
+                    <input type="radio" id="commute1" name="commute" value="20min" >
+                    <label for="commute1"><i class="fa-solid fa-car"></i></i> Up to 20 minutes></label>
+                        
+                    <input type="radio" id="commute2" name="commute" value="30min" >
+                    <label for="commute2"><i class="fa-solid fa-car-side"></i> Up to 30 minutes</label>
+                        
+                    <input type="radio" id="commute3" name="commute" value="40min" >
+                    <label for="commute3"><i class="fa-solid fa-car-rear"></i> 40+ minutes</label>
+                          
+            
+                </div>          
+            </div>
+        </div>
+        
+        
+                <div class="card">
+                    <div class="card-header">
+                        Rent Budget
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">What is your monthly budget?</h5>
+                        <div class="buttons">
+                            <input type="radio" id="rent1" name="rent" value="rent400" >
+                            <label for="rent1"><i class="fa-solid fa-hand-holding-dollar"></i> $400 - $600</label>
+                                
+                            <input type="radio" id="rent2" name="rent" value="rent600" >
+                            <label for="rent2"><i class="fa-solid fa-coins"></i> $600 - $800</label>
+                                
+                            <input type="radio" id="rent3" name="rent" value="rent800" >
+                            <label for="rent3"><i class="fa-solid fa-money-bills"></i> $800 - $1000+</label>
+                                  
+                          
+                        </div>          
+                    </div>
+                </div>
+        <!--end slider-->
+        <!--start slider-->
+                <div class="card">
+                    <div class="card-header">
+                        Move In Date
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">When are you planning to rent/move?</h5>
+                        <div class="buttons">
+                            <input type="radio" id="move1" name="move" value="ASAP" >
+                            <label for="move1"><i class="fa-solid fa-house-circle-exclamation"></i>ASAP</label>
+                                
+                            <input type="radio" id="move2" name="move" value="2-3-months" >
+                            <label for="move2"><i class="fa-solid fa-triangle-exclamation"></i>2-3 Months</label>
+                                
+                            <input type="radio" id="move3" name="move" value="6-months" >
+                            <label for="move3"> <i class="fa-solid fa-circle-exclamation"></i>6 Months-1yr+ </label>
+                                  
+                      
+                        </div>              
+                    </div>
+                </div>
+        </div> <!--end of card container div for 3 cards-->
+                
+        </div> <!--main div-->      
+            </div>
+        </div>
+
+        <div class="submit-button">
+            <button type="submit" class="submit-btn">Submit</button> 
+           </div>
+        
+        <!--- <div class="submit-button">
+            <input type="submit" value="Submit">
+          </div> --->
+ 
+            
+        
+        
+     
+</body>
+</html>
