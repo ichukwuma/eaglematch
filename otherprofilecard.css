@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow:300,400,600);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+body{
+    background-color: #E0EDD4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: Barlow, sans-serif;
+    
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+  display: inline-block;
+    min-height: 300px;
+    min-width: 300px;
+    margin-right: 10px;
+    background-color: white;
+    margin: 10px; /* Add spacing between cards */
+    border: 1px solid #ccc;
+    overflow: hidden;
+    white-space: normal; 
+    text-align: center;
+   
+}
+
+.card-body{
+    display: flex; /* Use flex layout for the card body */
+    justify-content: space-between; /* Arrange items in a row with space between them */
+    align-items: center; /* Vertically center items */
+    padding: 10px;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    padding: 30px 40px;
+     
+}
+
+
+.card-header {
+        color: #2E4214;
+        background-color: #c8d7b9;
+        text-align: center;
+        font-weight: 900;
+        
+}
+.picture {
+    width: 100px; /* Adjust the width and height to your desired circle size */
+  height: 100px;
+  border-radius: 50%; /* Makes the container circular */
+  overflow: hidden;
+  justify-content: center;
+  }
+  .picture img {
+    width: 100%; /* Makes the image fill the circular container */
+  height: 100%; /* Makes the image fill the circular container */
+  object-fit: cover;
+  align-items: center;
+  }
+  
+  .text {
+    padding-top: 20px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    max-width: 300px;
+  
+}
+.text p {
+    font-size: 16px; /* Set a specific font size for headings */
+    max-width: 100%; /* Ensure the text doesn't exceed the container width */
+    overflow: hidden; /* Hide overflow text if it exceeds the container */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow-wrap: break-word;
+}
+  .tags{
+    display: inline-block;
+    border: 2px solid #394D23; /* Border around the squoval */
+    color: #394D23; /* Text color matches the border color */
+    border-radius: 15px; /* Controls the roundness of corners (adjust as needed) */
+    font-weight: bold;
+    font-size: 12px; /* Adjust font size to fit within the shape */
+    line-height: 30px; /* Center the text vertically */
+    text-align: center; /* Center the text horizontally */
+    padding: 5px; /* Add padding to keep the text inside */
+    margin-right: 10px; /* Adds spacing between squoval tags */
+   
+    }
+   .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: auto;
+   }
+   .like-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: right;
+   padding-top: 50px;
+    
+  }
+  
+  #like-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    
+  }
+  
+  .like-icon {
+    width: 50px; /* Adjust the size of the heart icon */
+    height: 50px;
+  }
+  .like-text {
+    font-size: 14px; /* Adjust the font size as needed */
+  
+  }
