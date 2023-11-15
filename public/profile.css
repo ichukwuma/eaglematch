@@ -1,0 +1,197 @@
+
+
+/* Original Body Style*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+	font-family: Barlow, sans-serif;
+  background-color: #E0EDD4;
+}
+
+/* Navbar Style */
+.navbar-brand img {
+  height: auto;
+  width: auto;
+  max-height: 100px;
+  max-width: 100px;
+}
+
+/* add this in case the background color won't show up when u type it
+inside of the html code */
+.navbar{
+  background-color: #c8d7b9;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+
+
+/* Main Content Style*/
+main{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Page Title Style */
+
+/* Heading Style */
+h1{
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+
+
+/* Footer Style */
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  
+}
+.container {
+  border-radius: 75%;
+}
+.card-body {
+  
+}
+.card-header {
+  background-color: red;
+}
+.profile {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.profile-image {
+  width: 100%;
+}
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.profile-bio {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.picture {
+  width: 150px; /* Adjust the width and height to your desired circle size */
+height: 150px;
+border-radius: 50%; /* Makes the container circular */
+overflow: hidden;
+justify-content: center;
+}
+
+.picture img {
+  width: 100%; /* Makes the image fill the circular container */
+height: 100%; /* Makes the image fill the circular container */
+object-fit: cover;
+align-items: center;
+}
+.tags{
+  display: inline-block;
+  border: 2px solid #394D23; /* Border around the squoval */
+  color: #394D23; /* Text color matches the border color */
+  border-radius: 15px; /* Controls the roundness of corners (adjust as needed) */
+  font-weight: bold;
+  font-size: 12px; /* Adjust font size to fit within the shape */
+  line-height: 30px; /* Center the text vertically */
+  text-align: center; /* Center the text horizontally */
+  padding: 5px; /* Add padding to keep the text inside */
+  margin-right: 10px; /* Adds spacing between squoval tags */
+ 
+  }
+ .tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: auto;
+ }
+
+ /* like button*/
+
+ /*
+ .like-button button {
+  background: url('images/unliked-button.png') no-repeat center;
+  background-size: cover;
+  width: 40px;
+  height: 40px; 
+  border: none;
+  cursor: pointer;
+  text-align: end;
+}
+
+.like-button button.liked {
+  background: url('images/liked-button.png') no-repeat center;
+  background-size: cover;
+}
+*/
+/*
+ .like-button button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.like-icon {
+  width: 40px; 
+  height: 40px; 
+}
+.like-button button.liked {
+  background: url('images/liked-button.png') no-repeat center;
+  background-size: cover;
+}
+*/
+
+.like-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#like-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  
+}
+
+.like-icon {
+  width: 50px; /* Adjust the size of the heart icon */
+  height: 50px;
+}
+.like-text {
+  font-size: 16px; /* Adjust the font size as needed */
+
+}
+
+ .sidebar {
+  border: none;
+  height: 100%;
+ }
+
+ .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .content {
+
+ }
