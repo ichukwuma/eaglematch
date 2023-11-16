@@ -12,6 +12,9 @@ app.use(express.json())
 
 app.use(express.urlencoded({extended: false}))
 
+//for images
+app.use('/images', express.static('images'))
+
 //use ejs to for the view engine
 app.set('view engine', 'ejs')
 
@@ -30,11 +33,3 @@ app.get("/terms", (req, res) => {
 app.listen(5501, () => {
     console.log("Server running port: 5501")
 })
-
-//Light Dark Mode Toggle
-
-function myFunction() {
-    let element = document.body;
-    element.classList.toggle("dark");
-  }
-  
