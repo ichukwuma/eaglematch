@@ -1,0 +1,280 @@
+/* Original Body Style*/
+body{
+  margin: 0;
+  font-size: .9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #2E4214;
+  text-align: left;
+  background-color: #E0EDD4;
+  font-family: 'Barlow', sans-serif;
+  display: flex;
+  flex-direction: column;
+  /*min-height: 100%;*/
+  min-height: 400px;
+  margin-bottom: 100px;
+  clear: both;
+}
+
+/* Navbar Logo Style*/
+.navbar-brand img {
+height: auto;
+width: auto;
+max-height: 100px;
+max-width: 100px;
+}
+
+/* Navbar Style */
+.navbar{
+background-color: #c8d7b9;
+padding-bottom: 1rem;
+padding-top: 1rem;
+color: #342D2D;
+font-weight: 900;
+}
+
+/* Navbar Element Format
+.nav-item{
+margin-bottom: 0.5rem;
+}
+.svg{
+}
+*/
+
+/* Icon Styling */
+.bi{
+color: #342D2D;
+}
+
+.text-right{
+  margin-bottom: 5px;
+}
+
+.footer{
+  position: absolute;        /* for it to disappear under last body element */
+  bottom: 0;    
+
+}
+/* Light and Dark Mode Toggle Button Style */
+button{
+background-color: transparent;
+border: none;
+color: white;
+padding: 7px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+
+/*
+Old Button Style
+  /*
+  cursor: pointer;
+  border: none;
+  text-align: center; 
+  background-color: none;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  //color: white;
+  padding: 15px 32px;
+  text-align: justify;
+  text-decoration: none;
+  display: flex;
+  //font-size: 16px;
+*/
+}
+
+
+/* Main Content Style*/
+main{
+margin-left: 2rem;
+margin-right: 2rem;
+margin-top: 1.5rem;
+margin-bottom: 1.5rem;
+}
+
+/* Dark and Light Mode Style */
+
+/* Dark Mode Style */
+.dark{
+background-color: #342D2D;
+color: #E0EDD4;
+}
+
+
+/* Main Page Title/Heading Style */
+h1{
+padding-bottom: 1rem;
+text-align: center;
+/*(For Dark Mode Toggle)color: #342D2D; */
+}
+
+
+
+/* Footer Style */
+.footer{
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+text-align: center;
+
+}
+
+
+.ui-w-80 {
+  width : 80px !important;
+  height: auto;
+}
+
+.btn-default {
+  border-color: rgba(24, 28, 33, 0.1);
+  background  : rgba(0, 0, 0, 0);
+  color       : #4E5155;
+}
+
+label.btn {
+  margin-bottom: 0;
+}
+
+.btn-outline-primary {
+  border-color: #26B4FF;
+  background  : transparent;
+  color       : #26B4FF;
+}
+
+.btn {
+  cursor: pointer;
+    color: #394D23;
+    background-color: #c8d7b9;
+    font-size: 13px;
+    padding: -10%;
+}
+.btn:hover {
+  background-color:#2E4214;
+  color: white;
+}
+
+.text-light {
+  color: #babbbc !important;
+}
+
+
+
+.card {
+  background-clip: padding-box;
+  box-shadow     : 0 1px 4px rgba(24, 28, 33, 0.012);
+  
+}
+
+.row-bordered {
+  overflow: hidden;
+}
+
+.account-settings-fileinput {
+  position  : absolute;
+  visibility: hidden;
+  width     : 1px;
+  height    : 1px;
+  opacity   : 0;
+}
+
+.tab-body{
+  background-color: #c8d7b9;
+  color: black;
+}
+.tab-body .list-group .list-group-item:hover {
+background-color: #2E4214;
+color: white;
+}
+.list-group-item:not(.active) {
+  background-color: #c8d7b9;
+}
+.account-settings-links .list-group-item.active {
+  font-weight: 900 !important;
+  color: black;
+  
+}
+
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+  background: transparent !important;
+}
+
+.account-settings-multiselect~.select2-container {
+  width: 100% !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+  padding     : 0.85rem 1.5rem;
+  border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+  color: #4e5155 !important;
+}
+
+.material-style .account-settings-links .list-group-item {
+  padding     : 0.85rem 1.5rem;
+  border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.material-style .account-settings-links .list-group-item.active {
+  color: #4e5155 !important;
+}
+
+.dark-style .account-settings-links .list-group-item {
+  padding     : 0.85rem 1.5rem;
+  border-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.dark-style .account-settings-links .list-group-item.active {
+  color: #fff !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+  color: #4E5155 !important;
+  
+}
+
+.light-style .account-settings-links .list-group-item {
+  padding     : 0.85rem 1.5rem;
+  border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+/*css for preferences in settings*/
+
+.buttons label {
+  display: inline-block;
+    border: 2px solid #394D23; /* Border around the squoval */
+    color: #394D23; /* Text color matches the border color */
+    border-radius: 15px; /* Controls the roundness of corners (adjust as needed) */
+    font-weight: bold;
+    font-size: 12px; /* Adjust font size to fit within the shape */
+    line-height: 30px; /* Center the text vertically */
+    text-align: center; /* Center the text horizontally */
+    padding: 5px; /* Add padding to keep the text inside */
+    margin-right: 10px; /* Adds spacing between squoval tags */
+}
+
+.buttons input[type="radio"] {
+  display: none;
+}
+
+.buttons input[type="radio"]:checked+label {
+    background-color: #394D23;
+    color: white;
+  }
+  
+.card {
+  margin: 10px;
+  border: 1px solid grey;
+}
+  .card-header {
+    color: #2E4214;
+    background-color: #c8d7b9;
+    text-align: center;
+    font-weight: 900;
+}

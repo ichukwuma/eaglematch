@@ -1,0 +1,147 @@
+/* Original Body Style*/
+body{
+  margin: 0;
+  font-size: .9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #2E4214;
+  text-align: left;
+  background-color: #E0EDD4;
+  font-family: 'Barlow', sans-serif;
+  display: flex;
+  flex-direction: column;
+  /*min-height: 100%;*/
+  min-height: 400px;
+  margin-bottom: 100px;
+  clear: both;
+    
+}
+
+/* Navbar Logo Style*/
+.navbar-brand img {
+height: auto;
+width: auto;
+max-height: 100px;
+max-width: 100px;
+}
+
+/* Navbar Style */
+.navbar{
+background-color: #c8d7b9;
+padding-bottom: 1rem;
+padding-top: 1rem;
+color: #342D2D;
+font-weight:900
+}
+
+/* Navbar Element Format
+.nav-item{
+margin-bottom: 0.5rem;
+}
+.svg{
+}
+*/
+
+/* Icon Styling */
+.bi{
+color: #342D2D;
+}
+
+
+/* Light and Dark Mode Toggle Button Style */
+button{
+background-color: transparent;
+border: none;
+color: white;
+padding: 7px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+
+/*
+Old Button Style
+  /*
+  cursor: pointer;
+  border: none;
+  text-align: center; 
+  background-color: none;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  //color: white;
+  padding: 15px 32px;
+  text-align: justify;
+  text-decoration: none;
+  display: flex;
+  //font-size: 16px;
+*/
+}
+
+
+/* Main Content Style*/
+main{
+margin-left: 2rem;
+margin-right: 2rem;
+margin-top: 1.5rem;
+margin-bottom: 5rem;
+}
+
+/* Dark and Light Mode Style */
+
+/* Light Mode Style */
+/* .light{
+background-color: #E0EDD4;
+color: #394D23;
+} */
+
+/* Dark Mode Style */
+.dark{
+background-color: #342D2D;
+color: #E0EDD4;
+}
+
+/* 
+Light Mode Toggle  Button Styling
+.bi-brightness-high{
+background-color: none;
+color: #342D2D;
+}
+*/
+
+
+
+/* Main Page Title/Heading Style */
+h1{
+padding-bottom: 1rem;
+text-align: center;
+/*(For Dark Mode Toggle)color: #342D2D; */
+}
+
+/* Temporary Question Style */
+.question{
+text-align: left;
+padding-left: 1rem;
+padding-right: 1rem;
+font-weight: 600;
+}
+
+.q-content{
+text-align: left;
+padding-left: 2rem;
+padding-right: 2rem;
+font-size: x-large;
+}
+
+
+/* Footer Style */
+.footer{
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+text-align: center;
+
+}
