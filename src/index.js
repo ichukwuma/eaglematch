@@ -19,6 +19,9 @@ app.set('view engine', 'ejs')
 //static folder for out login-register file
 app.use(express.static("public"))
 
+//for images
+app.use('/images', express.static('images'))
+
 // type localhost:5501/login in your browser and this should pop up login
 app.get("/login", (req, res) => {
     res.render("login")
@@ -27,6 +30,46 @@ app.get("/login", (req, res) => {
 // type localhost:5501/register in your browser and this should pop up register
 app.get("/register", (req, res) => {
     res.render("register")
+})
+
+// type localhost:5501/home in your browser and this should pop up home
+app.get("/about", (req, res) => {
+    res.render("about")
+})
+
+// type localhost:5501/contact in your browser and this should pop up contact
+app.get("/contact", (req, res) => {
+    res.render("contact")
+})
+
+// type localhost:5501/faq in your browser and this should pop up faq
+app.get("/faq", (req, res) => {
+    res.render("faq")
+})
+
+// type localhost:5501/page in your browser and this should pop up page
+app.get("/profile", (req, res) => {
+    res.render("profile")
+})
+
+// type localhost:5501/home in your browser and this should pop up home
+app.get("/home", (req, res) => {
+    res.render("home")
+})
+
+// type localhost:5501/search in your browser and this should pop up search results page
+app.get("/search", (req, res) => {
+    res.render("search")
+})
+
+// type localhost:5501/settings in your browser and this should pop up settings
+app.get("/settings", (req, res) => {
+    res.render("settings")
+})
+
+// type localhost:5501/terms in your browser and this should pop up terms
+app.get("/terms", (req, res) => {
+    res.render("terms")
 })
 
 //i dont think this is necessary since 
