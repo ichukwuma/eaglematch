@@ -7,6 +7,13 @@ body{
     min-height: 100%;
 	font-family: Barlow, sans-serif;
   background-color: #E0EDD4;
+  min-height: 400px;
+  margin-bottom: 100px;
+  clear: both;
+}
+
+span{
+  margin-bottom: 5px;
 }
 
 /* Navbar Style */
@@ -23,6 +30,8 @@ inside of the html code */
   background-color: #c8d7b9;
   padding-bottom: 1rem;
   padding-top: 1rem;
+  color: #342D2D;
+  font-weight:900
 }
 
 
@@ -42,6 +51,26 @@ h1{
   padding-bottom: 1rem;
   text-align: center;
 }
+
+/*for submit button */
+
+.editprof-btn{
+  color: #394D23;
+    margin-top: 20px;
+    background-color: #c8d7b9;
+    border-radius: 12px;
+    
+}
+
+.rounded-circle{
+  border: 4px solid #c8d7b9;
+}
+
+ 
+  .editprof-btn:hover {
+    background-color: #2E4214;
+    color: #c8d7b9;
+  }
 
 
 

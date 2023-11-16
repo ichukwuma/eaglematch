@@ -1,0 +1,38 @@
+
+
+/* Original Body Style*/
+body{
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #2E4214;
+    text-align: left;
+    background-color: #E0EDD4;
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    flex-direction: column;
+    /*min-height: 100%;*/
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+  }
+
+/* add this in case the background color won't show up when u type it
+inside of the html code */
+.navbar{
+  background-color: #c8d7b9;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  color: #342D2D;
+  font-weight:900
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    
+  }

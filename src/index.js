@@ -68,8 +68,19 @@ app.get("/settings", (req, res) => {
 })
 
 // type localhost:5501/terms in your browser and this should pop up terms
-app.get("/terms", (req, res) => {
-    res.render("terms")
+app.get("/Terms", (req, res) => {
+    res.render("Terms")
+})
+
+
+// type localhost:5501/notifications in your browser and this should pop up notifications
+app.get("/notifications", (req, res) => {
+    res.render("notifications")
+})
+
+// type localhost:5501/ in your browser and this should pop up landing
+app.get("/", (req, res) => {
+    res.render("landing")
 })
 
 //i dont think this is necessary since 
@@ -127,7 +138,8 @@ app.post("/register", async (req, res) =>{
 
         const userdata = await collection.insertMany(data)
         console.log(userdata) 
-        res.render('tags')
+        //res.render('tags')
+        res.render('login')
 
         
     }
