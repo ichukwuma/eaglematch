@@ -138,10 +138,13 @@ app.post("/register", async (req, res) =>{
 
         const userdata = await collection.insertMany(data)
         console.log(userdata) 
-        //res.render('tags')
-        res.render('login')
 
-        
+        const goToLogin = 'Nice, you are now registered! Click above to login!'
+        res.render('register', {
+            goToLogin
+        })
+        //res.render('tags')
+        //res.render('login')
     }
 })
 
@@ -152,12 +155,6 @@ app.post("/register", async (req, res) =>{
 
 //Login user
 app.post("/login", async (req, res)=>{
-
-   /* const data2 = {
-        email: req.body.email,
-        password: req.body.password
-    } 
-    */
         const checkUser = await collection.findOne({email: req.body.email})
 
         //compare hashpassword from our DB
@@ -173,52 +170,71 @@ app.post("/login", async (req, res)=>{
 
         else if(checkPassword){
           res.render('home')
-        }else{
+        }
+        
+        else{
             const incorrectPasswordAlert = 'Incorrect password'
             res.render('login', {
                incorrectPasswordAlert
             })
-               //res.send("Incorrect password")
+            
         }
 })
 
-//app.use(bodyParser.json()); // to support JSON bodies
-//app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
+//updating user password here
 
 
-
-//this is where i want to edit and add in for tags D:
-/*app.post("/tags", async (req, res) =>{
-    
-    res.send(req.body.noise); //this should be giving result of noise 
-    const myData = {
-        tags: res.send(req.body.noise)};
-    myData.save()
-          //res.send("item saved to database");
-    const tagsData = await collection.insertMany(myData);
-    console.log(tagsData);
-   
-});
-*/
-// Endpoint to add tags to a user
-
-
-app.post('/tags', async (req, res) => {
-    const { tag } = req.body;
-
+app.post("/settings", async (req, res) => {
     try {
-        // Create a new user document with the selected tag
-        const user = new user({ tags: [tag] });
+        //const { email, password, newPassword } = req.body;
+       // console.log('Change Password Body:',
+       const {currentPassword, newPassword} = req.body
+    
+        //const user = await collection.findOne({ email });
+        const user = await collection.findOne({email: req.body.email})
+        if (!user) {
+            const notUser = 'Please enter your UNT Student Email'
+            res.render('settings', {
+                notUser 
+            })
+             //return res.status(404).json({ error: 'User not found' });
+        }
+        
+        //const isPassCorrect = await bcrypt.compare(currentPassword, user.password);
+        //const checkPassword = await bcrypt.compare(req.body.password, user.password)
 
-        // Save the document to the database
-        await user.save();
 
-        res.json({ message: 'Tag saved to MongoDB' });
+        //checking password length
+        else if(newPassword.length <= 7 ){
+            const passwordLengthAlert = 'Please enter your new password with a minimum of 8 characters'
+            res.render('settings', {
+                passwordLengthAlert
+            })
+        }
+
+
+        else{
+            const numOfSaltRounds = 10;
+            const hashedPassword = await bcrypt.hash(newPassword, numOfSaltRounds);
+
+            user.password = hashedPassword;
+            await user.save();
+
+            const updatedPasswordSuccess = 'Password was updated successfully'
+            res.render('settings', {
+                updatedPasswordSuccess
+            })
+            //return res.json({ message: 'Password updated successfully' }); 
+        }
     } catch (error) {
-        console.error('Error saving to MongoDB:', error);
-        res.status(500).json({ error: error.message });
+        console.error('Error in /settings:', error);
+        res.status(500).json({ error: 'Issue with password' });
     }
-}); 
+});
+
+       
+
+
 
 //port we're listning on
 app.listen(5501, () => {
