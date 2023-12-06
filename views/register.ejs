@@ -24,20 +24,6 @@
     <title>Eagle Match Registration</title>
 
 </head>
-<!--Nav bar-->
-
-<!--- <nav class="navbar navbar-expand-lg"> --->
-  <!-- <div class="container-fluid"> --->
-
-    <!---  <h3>Eagle Match Registration</h3>
-      </a>
-    
-      
-        </div> --->
-
- <!---</div>--->
-<!--- </nav> --->
-
 
  <!--Home Page Nav Bar: -->
  <header>
@@ -84,7 +70,7 @@
     <div class="card">
       
       <div class="card-header">
-        Registration
+        <b>Register</b>
       </div>
         <div class="card-body">
     
@@ -111,6 +97,15 @@
               <%= passwordLengthAlert %> 
             </div>
           <% } %>
+
+          <!--checks password length-->
+          <% if(typeof  goToLogin != 'undefined'){ %>
+            <div class="alert alert-success d-flex align-items-center" role="alert">
+              <%= goToLogin %> 
+            </div>
+          <% } %>
+
+          
        
           
 
@@ -119,7 +114,7 @@
             <div class="form-group row">
                 <label for="email" class="col-md-3 col-form-label">UNT E-Mail Address:</label>
                 <div class="col-md-7">
-                  <input type="email" id="email" name="email" required autocomplete="off" class="form-control">
+                  <input type="email" id="email" name="email" required autocomplete="off" placeholder="Enter your email" class="form-control">
                 </div>
               </div>
 
@@ -128,16 +123,16 @@
   
               
                 <div class="form-group row">
-                  <label for="password" class="col-md-3 col-form-label">Password</label>
+                  <label for="password" class="col-md-3 col-form-label">Password:</label>
                   <div class="col-md-7">
-                    <input class="form-control" name="password" type="password" name="password" id="password" required>
+                    <input class="form-control" name="password" type="password" name="password" id="password" placeholder="Enter your password ">
                   </div>
                </div>
 
 
           <!--submit button here-->
                <div class="col-md-6 offset-md-4">
-                <button type="submit" class="submit-btn">REGISTER</button> 
+                <button type="submit" class="submit-btn"><b>REGISTER</b></button> 
                </div>
            
               </div>
