@@ -140,6 +140,7 @@ text-align: center;
 }
 
 
+
 /* Card Header Style */
 .card-header{
   /*background-color: #E0EDD4;
@@ -150,12 +151,17 @@ text-align: center;
   text-align: center;
 }
 
+
 /* Card Body Style */
 
 /* Card Text Style */
 .cardtext{
   font-weight: 600;
   color:#342D2D;
+}
+
+.card-info{
+  text-align:center;
 }
 
 /* Submit Button Style */
