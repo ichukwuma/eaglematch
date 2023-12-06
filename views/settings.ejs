@@ -190,277 +190,246 @@
                           </div>
 
                           <div class="form-group">
-                            <label class="form-label">Change Preferences:</label>
-                            <div class="card">
-                              <div class="card-header">
-                                What's your noise level like?
-                              </div>
-                              <div class="card-body text-center"> 
-                                  <div class="buttons">
-                                      <input type="radio" id="noise1" name="noise" value="quiet">
-                                      <label for="noise1"><i class="fa-solid fa-volume-xmark"></i>Quiet</label>
-                                    
-                                      <input type="radio" id="noise2" name="noise" value="noisy">
-                                      <label for="noise2"><i class="fa-solid fa-volume-low"></i> Noisy</label>
-                                    
-                                      <input type="radio" id="noise3" name="noise" value="both-noise">
-                                      <label for="noise3"><i class="fa-solid fa-volume-off"></i> Both</label>
-                  
-                                      <input type="radio" id="noise4" name="noise" value="prefer-not-to-say">
-                                      <label for="noise4"><i class="fa-solid fa-circle-xmark"></i> Prefer not to say</label>
+                                  <label class="form-label">Change Preferences:</label>
+                                  <div class="card">
+                                    <div class="card-header">
+                                      What's your noise level like?
                                     </div>
-                                  
-                              </div>
-                          </div>
-                  
-                          <div class="card">
-                              <div class="card-header">
-                                What best describes your personality?
-                              </div>
-                              <div class="card-body text-center">
-                                  <div class="buttons">
-                                      <input type="radio" id="personality1" name="personality" value="introvert" >
-                                      <label for="personality1"> <i class="fa-solid fa-book-open-reader"></i>Introvert</label>
-                                    
-                                      <input type="radio" id="personality2" name="personality" value="extrovert">
-                                      <label for="personality2"><i class="fa-solid fa-champagne-glasses"></i>Extrovert</label>
-                                    
-                                      <input type="radio" id="personality3" name="personality" value="both-personality">
-                                      <label for="personality3"><i class="fa-solid fa-face-smile"></i>Mix of both</label>
-                  
-                                      <input type="radio" id="personality4" name="personality" value="prefer-not-to-say">
-                                      <label for="personality4"><i class="fa-solid fa-circle-xmark"></i> Prefer not to say</label>
-                  
-                                    </div>
-                              </div>
-                          </div>
-                  
-                          
-                  
-                          <div class="card">
-                              <div class="card-header">
-                                Most time spent...
-                              </div>
-                              <div class="card-body text-center">
-                                  <div class="buttons">
-                                      <input type="radio" id="timespent1" name="timespent" value="outside-the-house" >
-                                      <label for="timespent1"><i class="fa-solid fa-person-hiking"></i> Outside the house</label>
-                                    
-                                      <input type="radio" id="timespent2" name="timespent" value="inside-all-day">
-                                      <label for="timespent2"><i class="fa-solid fa-house"></i>Inside all day</label>
-                                    
-                                      <input type="radio" id="timespent3" name="timespent" value="both-time-spent">
-                                      <label for="timespent3"><i class="fa-solid fa-map"></i>Mix of both</label>
-                  
-                                      <input type="radio" id="timespent4" name="timespent" value="prefer-not-to-say">
-                                      <label for="timespent4"><i class="fa-solid fa-circle-xmark"></i> Prefer not to say</label>
-                  
-                                    </div>     
-                              </div>
-                          </div>
-
-                          <div class="card">
-                            <div class="card-header">
-                              Any Pets?
-                            </div>
-                            <div class="card-body text-center">
-                                <div class="buttons">
-                                    <input type="radio" id="pets1" name="pets" value="pet-friendly" >
-                                    <label for="pets1"><i class="fa-solid fa-paw"></i> Pet Friendly</label>
-                
-                                    <input type="radio" id="pets2" name="pets" value="specific-pets" >
-                                    <label for="pets2"><i class="fa-solid fa-bowl-food"></i> Specific types only</label>
-                                        
-                                    <input type="radio" id="pets3" name="pets" value="no-pets" >
-                                    <label for="pets3"><i class="fa-solid fa-ban"></i> No Pets</label>
-                
-                                    <input type="radio" id="pets4" name="pets" value="prefer-not-to-say">
-                                    <label for="pets4"><i class="fa-solid fa-circle-xmark"></i> Prefer not to say</label>
-                
-                                  </div>
-                            </div>
-                        </div>
+                                    <div class="card-body text-center"> 
+                                        <div class="buttons">
+                                            <input type="radio" id="noise1" name="noise" value="quiet">
+                                            <label for="noise1"><i class="fa-solid fa-volume-xmark"></i>Quiet</label>
+                                          
+                                            <input type="radio" id="noise2" name="noise" value="noisy">
+                                            <label for="noise2"><i class="fa-solid fa-volume-low"></i>Noisy</label>
+                                          
+                                            <input type="radio" id="noise3" name="noise" value="both-noise">
+                                            <label for="noise3"><i class="fa-solid fa-volume-off"></i>Mild noise</label>
                         
-                
-                
-                        <div class="card">
-                            <div class="card-header">
-                              How do you feel about sharing?
-                            </div>
-                            <div class="card-body text-center">
-                                <div class="buttons">
-                                    <input type="radio" id="shared1" name="shared" value="sharing" >
-                                    <label for="shared1"> <i class="fa-solid fa-handshake"></i> "Sharing is caring"</label>
-                
-                                    <input type="radio" id="shared2" name="shared" value="ask-to-share" >
-                                    <label for="shared2"> <i class="fa-solid fa-question"></i> Just ask</label>
-                                         
-                                    <input type="radio" id="shared3" name="shared" value="no-shared-items" >
-                                    <label for="shared3"><i class="fa-solid fa-ban"></i> Don't touch my stuff</label>
-                
-                                    <input type="radio" id="shared4" name="shared" value="prefer-not-to-say">
-                                    <label for="shared4"><i class="fa-solid fa-circle-xmark"></i> Prefer not to say</label>
-                
-                                </div>
-                                              
-                            </div>
-                        </div>
-                
-                
-                        <div class="card">
-                            <div class="card-header">
-                              How clean are you?
-                            </div>
-                            <div class="card-body text-center">
-                                <div class="buttons">
-                                    <input type="radio" id="clean1" name="clean" value="very-clean" >
-                                    <label for="clean1"><i class="fa-solid fa-spray-can-sparkles"></i> Very Clean (daily)</label>
+                                          </div>
                                         
-                                    <input type="radio" id="clean2" name="clean" value="clean-occasionally" >
-                                    <label for="clean2"><i class="fa-solid fa-hand-sparkles"></i> Clean occasionally</label>
-                                        
-                                    <input type="radio" id="clean3" name="clean" value="messy" >
-                                    <label for="clean3"> <i class="fa-solid fa-broom"></i> Doesn't mind a mess </label>
-                
-                                    <input type="radio" id="clean4" name="clean" value="prefer-not-to-say">
-                                    <label for="clean4"><i class="fa-solid fa-circle-xmark"></i> Prefer not to say</label>
-                
+                                    </div>
                                 </div>
-                                               
-                            </div>
-                        </div>
+                        
+                                <div class="card">
+                                    <div class="card-header">
+                                      What best describes your personality?
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <div class="buttons">
+                                            <input type="radio" id="personality1" name="personality" value="introvert" >
+                                            <label for="personality1"> <i class="fa-solid fa-book-open-reader"></i>Introvert</label>
+                                          
+                                            <input type="radio" id="personality2" name="personality" value="extrovert">
+                                            <label for="personality2"><i class="fa-solid fa-champagne-glasses"></i>Extrovert</label>
+                                          
+                                            <input type="radio" id="personality3" name="personality" value="both-personality">
+                                            <label for="personality3"><i class="fa-solid fa-face-smile"></i>Ambivert</label>
+                        
+                                          </div>
+                                    </div>
+                                </div>
+                        
+                                
+                        
+                                <div class="card">
+                                    <div class="card-header">
+                                      Most time spent...
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <div class="buttons">
+                                            <input type="radio" id="timespent1" name="timespent" value="outside-the-house" >
+                                            <label for="timespent1"><i class="fa-solid fa-person-hiking"></i>Outside</label>
+                                          
+                                            <input type="radio" id="timespent2" name="timespent" value="inside-all-day">
+                                            <label for="timespent2"><i class="fa-solid fa-house"></i>Inside</label>
+                                          
+                                            <input type="radio" id="timespent3" name="timespent" value="both-time-spent">
+                                            <label for="timespent3"><i class="fa-solid fa-map"></i>Outside&Inside</label>
+                        
+                                          </div>     
+                                    </div>
+                                </div>
 
-                        <div class="card">
-                          <div class="card-header">
-                            How do you feel about having guests?
-                          </div>
-                          <div class="card-body text-center">
-                              <div class="buttons">
-                                  <input type="radio" id="guests1" name="guests" value="frequent-guests" >
-                                  <label for="guests1"><i class="fa-solid fa-people-group"></i> Frequent guests</label>
-                                      
-                                  <input type="radio" id="guests2" name="guests" value="occasionally-guests" >
-                                  <label for="guests2"><i class="fa-solid fa-person"></i> occasionally guests </label>
-                                      
-                                  <input type="radio" id="guests3" name="guests" value="no-guests" >
-                                  <label for="guests3"><i class="fa-solid fa-ban"></i> No guests</label>
-              
-                                  <input type="radio" id="guests4" name="guests" value="prefer-not-to-say">
-                                  <label for="guests4"><i class="fa-solid fa-circle-xmark"></i> Prefer not to say</label>
-              
-                              </div>               
-                          </div>
+                                <div class="card">
+                                  <div class="card-header">
+                                    Pet preferences?
+                                  </div>
+                                  <div class="card-body text-center">
+                                      <div class="buttons">
+                                          <input type="radio" id="pets1" name="pets" value="pet-friendly" >
+                                          <label for="pets1"><i class="fa-solid fa-paw"></i>Pet Friendly</label>
+                      
+                                          <input type="radio" id="pets2" name="pets" value="specific-pets" >
+                                          <label for="pets2"><i class="fa-solid fa-bowl-food"></i>Specific pets only</label>
+                                              
+                                          <input type="radio" id="pets3" name="pets" value="no-pets" >
+                                          <label for="pets3"><i class="fa-solid fa-ban"></i>No pets</label>
+                      
+                                          
+                      
+                                        </div>
+                                  </div>
+                              </div>
+                              
+                      
+                      
+                              <div class="card">
+                                  <div class="card-header">
+                                    How do you feel about sharing?
+                                  </div>
+                                  <div class="card-body text-center">
+                                      <div class="buttons">
+                                          <input type="radio" id="shared1" name="shared" value="sharing" >
+                                          <label for="shared1"> <i class="fa-solid fa-handshake"></i>Prefers to share</label>
+                      
+                                          <input type="radio" id="shared2" name="shared" value="ask-to-share" >
+                                          <label for="shared2"> <i class="fa-solid fa-question"></i>Doesn't mind sharing</label>
+                                               
+                                          <input type="radio" id="shared3" name="shared" value="no-shared-items" >
+                                          <label for="shared3"><i class="fa-solid fa-ban"></i>No sharing</label>
+                                      </div>
+                                                    
+                                  </div>
+                              </div>
+                      
+                      
+                              <div class="card">
+                                  <div class="card-header">
+                                    How clean are you?
+                                  </div>
+                                  <div class="card-body text-center">
+                                      <div class="buttons">
+                                          <input type="radio" id="clean1" name="clean" value="very-clean" >
+                                          <label for="clean1"><i class="fa-solid fa-spray-can-sparkles"></i>Very Clean</label>
+                                              
+                                          <input type="radio" id="clean2" name="clean" value="clean-occasionally" >
+                                          <label for="clean2"><i class="fa-solid fa-hand-sparkles"></i>Clean occasionally</label>
+                                              
+                                          <input type="radio" id="clean3" name="clean" value="messy" >
+                                          <label for="clean3"> <i class="fa-solid fa-broom"></i>Doesn't mind a mess</label>
+                                      </div>
+                                                     
+                                  </div>
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header">
+                                  How do you feel about having guests?
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="buttons">
+                                        <input type="radio" id="guests1" name="guests" value="frequent-guests" >
+                                        <label for="guests1"><i class="fa-solid fa-people-group"></i>Frequent guests</label>
+                                            
+                                        <input type="radio" id="guests2" name="guests" value="occasionally-guests" >
+                                        <label for="guests2"><i class="fa-solid fa-person"></i>Occasional guests</label>
+                                            
+                                        <input type="radio" id="guests3" name="guests" value="no-guests" >
+                                        <label for="guests3"><i class="fa-solid fa-ban"></i>No guests</label>
+                                    </div>               
+                                </div>
+                            </div>
+                    
+                            <div class="card">
+                                <div class="card-header">
+                                  When does your day start?
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="buttons">
+                                        <input type="radio" id="schedule1" name="schedule" value="early-mornings" >
+                                        <label for="schedule1"><i class="fa-solid fa-dove"></i>Early mornings</label>
+                                            
+                                        <input type="radio" id="schedule2" name="schedule" value="mid-days" >
+                                        <label for="schedule2"><i class="fa-regular fa-sun"></i>Mid-Day</label>
+                                            
+                                        <input type="radio" id="schedule3" name="schedule" value="night-owl" >
+                                        <label for="schedule3"><i class="fa-solid fa-moon"></i>Night owl</label>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                    
+                    
+                    <div class="card">
+                        <div class="card-header">
+                          When do you sleep?
+                        </div>
+                        <div class="card-body text-center">
+                            <div class="buttons">
+                                <input type="radio" id="sleep1" name="sleep" value="9PM-10PM-Or-earlier" >
+                                <label for="sleep1"><i class="fa-solid fa-bed"></i>9PM-10PM</label>
+                                    
+                                <input type="radio" id="sleep2" name="sleep" value="10PM-12AM" >
+                                <label for="sleep2"><i class="fa-solid fa-mattress-pillow"></i>10PM-12AM</label>
+                                    
+                                <input type="radio" id="sleep3" name="sleep" value="After-Midnight" >
+                                <label for="sleep3"><i class="fa-solid fa-bed-pulse"></i>After midnight</label>
+                    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="card-header">
+                        How much time are you willing to commute to UNT?
                       </div>
-              
-                      <div class="card">
-                          <div class="card-header">
-                            When does your day start?
-                          </div>
-                          <div class="card-body text-center">
-                              <div class="buttons">
-                                  <input type="radio" id="schedule1" name="schedule" value="early-mornings" >
-                                  <label for="schedule1"><i class="fa-solid fa-dove"></i> Early mornings</label>
-                                      
-                                  <input type="radio" id="schedule2" name="schedule" value="mid-days" >
-                                  <label for="schedule2"><i class="fa-regular fa-sun"></i>Mid-Day</label>
-                                      
-                                  <input type="radio" id="schedule3" name="schedule" value="night-owl" >
-                                  <label for="schedule3"><i class="fa-solid fa-moon"></i> Night owl</label>
-              
-                                  <input type="radio" id="schedule4" name="schedule" value="prefer-not-to-say">
-                                  <label for="schedule4"><i class="fa-solid fa-circle-xmark"></i> Prefer not to say</label>
-              
+                      <div class="card-body text-center">
+                          <div class="buttons">
+                              <input type="radio" id="commute1" name="commute" value="20min" >
+                              <label for="commute1"><i class="fa-solid fa-car"></i></i>Up to 20 min</label>
+                                  
+                              <input type="radio" id="commute2" name="commute" value="30min" >
+                              <label for="commute2"><i class="fa-solid fa-car-side"></i>Up to 30 min</label>
+                                  
+                              <input type="radio" id="commute3" name="commute" value="40min" >
+                              <label for="commute3"><i class="fa-solid fa-car-rear"></i>40+ min</label>
+                          </div>          
+                      </div>
+                  </div>
+                  
+                  
+                          <div class="card">
+                              <div class="card-header">
+                                What is your monthly budget?
+                              </div>
+                              <div class="card-body text-center">
+                                  <div class="buttons">
+                                      <input type="radio" id="rent1" name="rent" value="rent400" >
+                                      <label for="rent1"><i class="fa-solid fa-hand-holding-dollar"></i>$400 - $600</label>
+                                          
+                                      <input type="radio" id="rent2" name="rent" value="rent600" >
+                                      <label for="rent2"><i class="fa-solid fa-coins"></i>$600 - $800</label>
+                                          
+                                      <input type="radio" id="rent3" name="rent" value="rent800" >
+                                      <label for="rent3"><i class="fa-solid fa-money-bills"></i>$800 - $1000+</label>
+                                            
+                             
+                                  </div>          
                               </div>
                           </div>
-                      </div>
-              
-              
-              <div class="card">
-                  <div class="card-header">
-                    When do you sleep?
-                  </div>
-                  <div class="card-body text-center">
-                      <div class="buttons">
-                          <input type="radio" id="sleep1" name="sleep" value="9PM-10PM-Or-earlier" >
-                          <label for="sleep1"><i class="fa-solid fa-bed"></i> 9PM-10PM (Or earlier)</label>
-                              
-                          <input type="radio" id="sleep2" name="sleep" value="10PM-12AM" >
-                          <label for="sleep2"><i class="fa-solid fa-mattress-pillow"></i>10PM-12AM</label>
-                              
-                          <input type="radio" id="sleep3" name="sleep" value="After-Midnight" >
-                          <label for="sleep3"><i class="fa-solid fa-bed-pulse"></i> After Midnight</label>
-              
-                          <input type="radio" id="sleep4" name="sleep" value="prefer-not-to-say">
-                          <label for="sleep4"><i class="fa-solid fa-circle-xmark"></i> Prefer not to say</label>
-              
-                      </div>
-                  </div>
-              </div>
-
-              <div class="card">
-                <div class="card-header">
-                  How much time are you willing to commute to UNT?
-                </div>
-                <div class="card-body text-center">
-                    <div class="buttons">
-                        <input type="radio" id="commute1" name="commute" value="20min" >
-                        <label for="commute1"><i class="fa-solid fa-car"></i></i> Up to 20 minutes></label>
-                            
-                        <input type="radio" id="commute2" name="commute" value="30min" >
-                        <label for="commute2"><i class="fa-solid fa-car-side"></i> Up to 30 minutes</label>
-                            
-                        <input type="radio" id="commute3" name="commute" value="40min" >
-                        <label for="commute3"><i class="fa-solid fa-car-rear"></i> Up to 40 minutes or more</label>
-                              
-                        <input type="radio" id="commute4" name="commute" value="prefer-not-to-say">
-                        <label for="commute4"><i class="fa-solid fa-circle-xmark"></i> Prefer not to say</label>
-                    </div>          
-                </div>
-            </div>
-            
-            
-                    <div class="card">
-                        <div class="card-header">
-                          What is your monthly budget?
-                        </div>
-                        <div class="card-body text-center">
-                            <div class="buttons">
-                                <input type="radio" id="rent1" name="rent" value="rent400" >
-                                <label for="rent1"><i class="fa-solid fa-hand-holding-dollar"></i> $400 - $600 (or lower)</label>
-                                    
-                                <input type="radio" id="rent2" name="rent" value="rent600" >
-                                <label for="rent2"><i class="fa-solid fa-coins"></i> $600 - $800</label>
-                                    
-                                <input type="radio" id="rent3" name="rent" value="rent800" >
-                                <label for="rent3"><i class="fa-solid fa-money-bills"></i> $800 - $1000+</label>
-                                      
-                                <input type="radio" id="rent4" name="rent" value="prefer-not-to-say">
-                                <label for="rent4"><i class="fa-solid fa-circle-xmark"></i> Prefer not to say</label>
-                            </div>          
-                        </div>
-                    </div>
-            
-                    <div class="card">
-                        <div class="card-header">
-                          When are you planning to rent/move?
-                        </div>
-                        <div class="card-body text-center">
-                            <div class="buttons">
-                                <input type="radio" id="move1" name="move" value="ASAP" >
-                                <label for="move1"><i class="fa-solid fa-house-circle-exclamation"></i> ASAP</label>
-                                    
-                                <input type="radio" id="move2" name="move" value="2-3-months" >
-                                <label for="move2"><i class="fa-solid fa-triangle-exclamation"></i>2-3 Months</label>
-                                    
-                                <input type="radio" id="move3" name="move" value="6-months" >
-                                <label for="move3"> <i class="fa-solid fa-circle-exclamation"></i> 6 Months</label>
-                                      
-                                <input type="radio" id="move4" name="move" value="1-year" >
-                                <label for="move4"><i class="fa-solid fa-person-circle-exclamation"></i> 1 year</label>
-                            </div>              
-                        </div>
-                    </div>
-                        </div> <!--form group div-->
+                  
+                          <div class="card">
+                              <div class="card-header">
+                                When are you planning to rent/move?
+                              </div>
+                              <div class="card-body text-center">
+                                  <div class="buttons">
+                                      <input type="radio" id="move1" name="move" value="ASAP" >
+                                      <label for="move1"><i class="fa-solid fa-house-circle-exclamation"></i>ASAP</label>
+                                          
+                                      <input type="radio" id="move2" name="move" value="2-3-months" >
+                                      <label for="move2"><i class="fa-solid fa-triangle-exclamation"></i>2-3 months</label>
+                                          
+                                      <input type="radio" id="move3" name="move" value="6-months" >
+                                      <label for="move3"> <i class="fa-solid fa-circle-exclamation"></i> 6 months</label>
+                                            
+                                      <input type="radio" id="move4" name="move" value="1-year" >
+                                      <label for="move4"><i class="fa-solid fa-person-circle-exclamation"></i> 1 yr</label>
+                                  </div>              
+                              </div>
+                          </div>
+                              </div> <!--form group div-->
 
                         
                       </div>
