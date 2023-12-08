@@ -1,1 +1,1 @@
- Our development team (Group 5: Bug Busters) will create a web application named Eagle Match that allows users (UNT students) to safely discover potential roommates as well as upload their own discoverable profile to connect with other users looking for roommates. 
+ Our development team (Group 5: Bug Busters) has created a web application named Eagle Match that allows users (UNT students) to safely discover potential roommates as well as upload their own discoverable profile to connect with other users looking for roommates. 
