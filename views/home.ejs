@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!--jquery and js for select2 JQUERY MUST ALWAYS BE ON TOP-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+  
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!--Select 2 CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet">
+
+    <!--Script: Boostrap bundle including popper js-->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+      <!--Script tag for select 2 search bar on home page-->
+      <script>
+        $(document).ready(function() {
+            $('#select-field').select2();
+        });
+      </script>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!--Home page and search page CSS-->
+    <link rel="stylesheet" href="home-search.css">
+
+    <!--Title of page-->
+    <title>Eagle Match Home Page</title>
+</head>
+
+<body>
+    <!--Home Page Nav Bar: -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/home">Eagle Match</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+              <!-- Home Link-->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/home"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+              </svg>Home</a>
+            </li>
+
+            <!-- Profile Link-->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/profile"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>Eagle Profile</a>
+            </li>
+
+               <!-- Notifications Link-->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/notifications"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+              </svg>Notification</a>
+            </li>
+
+
+            <!-- Settings Link-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+              </svg>Settings</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/settings">User Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/login">Logout</a></li>
+              </ul>
+            </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+   
+
+    <!-- Filter by Tags Section-->
+
+  <main>
+    <div class="filters">
+      <h3>Find Your Eagle Match!</h3>
+      <div class="filterDiv">
+      <div class="dropdown">
+        <button class="filter-option" data-filter-noise="Noise-Level" onclick="toggleFilter(event)">Noise Level</button>
+        <div class="sub-filters" style="display: none;">
+          <button class="sub-filter-option" data-sub-filter="quiet" onclick="toggleSubFilter(event)">Quiet</button>
+          <button class="sub-filter-option" data-sub-filter="noisy" onclick="toggleSubFilter(event)">Noisy</button>
+          <button class="sub-filter-option" data-sub-filter="mildnoise" onclick="toggleSubFilter(event)">Mild noise</button>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="filter-option" data-filter-personality="Personality" onclick="toggleFilter(event)">Personality</button>
+        <div class="sub-filters" style="display: none;">
+          <button class="sub-filter-option" data-sub-filter="introvert" onclick="toggleSubFilter(event)">Introvert</button>
+          <button class="sub-filter-option" data-sub-filter="extrovert" onclick="toggleSubFilter(event)">Extrovert</button>
+          <button class="sub-filter-option" data-sub-filter="ambivert" onclick="toggleSubFilter(event)">Ambivert</button>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="filter-option" data-filte-timespent="Most-Time-Spent" onclick="toggleFilter(event)">Most Time Spent:</button>
+        <div class="sub-filters" style="display: none;">
+          <button class="sub-filter-option" data-sub-filter="outside" onclick="toggleSubFilter(event)">Outside</button>
+          <button class="sub-filter-option" data-sub-filter="inside" onclick="toggleSubFilter(event)">Inside</button>
+          <button class="sub-filter-option" data-sub-filter="outandin" onclick="toggleSubFilter(event)">Outside & Inside</button>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="filter-option" data-filter-pets="Pet-Preference" onclick="toggleFilter(event)">Pet Preference</button>
+        <div class="sub-filters" style="display: none;">
+          <button class="sub-filter-option" data-sub-filter="petfriendly" onclick="toggleSubFilter(event)">Pet Friendly </button>
+          <button class="sub-filter-option" data-sub-filter="specificpets" onclick="toggleSubFilter(event)">Specific Pets</button>
+          <button class="sub-filter-option" data-sub-filter="nopets" onclick="toggleSubFilter(event)">No Pets</button>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="filter-option" data-filter-sharing="Sharing" onclick="toggleFilter(event)">Sharing</button>
+        <div class="sub-filters" style="display: none;">
+          <button class="sub-filter-option" data-sub-filter="prefersharing" onclick="toggleSubFilter(event)">Prefers to Share </button>
+          <button class="sub-filter-option" data-sub-filter="doesntmindsharing" onclick="toggleSubFilter(event)">Doesn't Mind Sharing</button>
+          <button class="sub-filter-option" data-sub-filter="nosharing" onclick="toggleSubFilter(event)">No Sharing</button>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="filter-option" data-filter-cleanliness="Cleanliness" onclick="toggleFilter(event)">Cleanliness</button>
+        <div class="sub-filters" style="display: none;">
+          <button class="sub-filter-option" data-sub-filter="veryclean" onclick="toggleSubFilter(event)">Very Clean </button>
+          <button class="sub-filter-option" data-sub-filter="cleanoccasionally" onclick="toggleSubFilter(event)">Clean Occasionally</button>
+          <button class="sub-filter-option" data-sub-filter="doesntmindamess" onclick="toggleSubFilter(event)">Doesn't Mind a Mess</button>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="filter-option" data-filter-guests="Guests" onclick="toggleFilter(event)">Guests</button>
+        <div class="sub-filters" style="display: none;">
+          <button class="sub-filter-option" data-sub-filter="frequentguests" onclick="toggleSubFilter(event)">Frequent Guests </button>
+          <button class="sub-filter-option" data-sub-filter="occasionalguests" onclick="toggleSubFilter(event)">Occasional Guests</button>
+          <button class="sub-filter-option" data-sub-filter="noguests" onclick="toggleSubFilter(event)">No Guests</button>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="filter-option" data-filter-wakeup="Wake-Up" onclick="toggleFilter(event)">Wake Up:</button>
+        <div class="sub-filters" style="display: none;">
+          <button class="sub-filter-option" data-sub-filter="earlymorning" onclick="toggleSubFilter(event)">Early Morning </button>
+          <button class="sub-filter-option" data-sub-filter="midday" onclick="toggleSubFilter(event)">Mid-Day</button>
+          <button class="sub-filter-option" data-sub-filter="nightowl" onclick="toggleSubFilter(event)">Night Owl</button>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="filter-option" data-filter-commute="Commute" onclick="toggleFilter(event)">Commute</button>
+        <div class="sub-filters" style="display: none;">
+          <button class="sub-filter-option" data-sub-filter="twentymin" onclick="toggleSubFilter(event)">Up to 20 min </button>
+          <button class="sub-filter-option" data-sub-filter="thirtymin" onclick="toggleSubFilter(event)">Up to 30 min</button>
+          <button class="sub-filter-option" data-sub-filter="fortymin" onclick="toggleSubFilter(event)">40+ min</button>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="filter-option" data-filter-rent="Rent" onclick="toggleFilter(event)">Rent</button>
+        <div class="sub-filters" style="display: none;">
+          <button class="sub-filter-option" data-sub-filter="fourhundred" onclick="toggleSubFilter(event)">$400 - $600 </button>
+          <button class="sub-filter-option" data-sub-filter="sixhundred" onclick="toggleSubFilter(event)">$600 - $800</button>
+          <button class="sub-filter-option" data-sub-filter="eighthundred" onclick="toggleSubFilter(event)">$800 - $1000+</button>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="filter-option" data-filter-move="Move" onclick="toggleFilter(event)">Move in by</button>
+        <div class="sub-filters" style="display: none;">
+          <button class="sub-filter-option" data-sub-filter="asap" onclick="toggleSubFilter(event)">ASAP </button>
+          <button class="sub-filter-option" data-sub-filter="twomon" onclick="toggleSubFilter(event)">2-3 Months</button>
+          <button class="sub-filter-option" data-sub-filter="sixmon" onclick="toggleSubFilter(event)">6 months</button>
+          <button class="sub-filter-option" data-sub-filter="oneyear" onclick="toggleSubFilter(event)">1 yr+</button>
+        </div>
+      </div>
+    </div>
+
+  </div> <!--filterdiv div-->
+    
+    <div class="list">
+      <!-- Profiles -->
+
+      <!-- AGP -->
+      <div class="card" 
+      data-filter-personality="introvert"
+      data-sub-filter="nightowl">
+      <div class="card-header">
+            AGP
+        </div>
+        <div class="card-body text-center">
+            <div class="like-button">
+                <button id="like-btn">
+                    <img src="images/unliked-button.png" alt="Like" class="like-icon">
+                    <div class="like-text">Like</div>
+                  </button>
+            </div>
+        <div class="left">
+            <div class="picture">
+                <img src="images/agp.jpeg" alt="user-profile-picture" class="#">
+            </div>
+            
+        </div>
+        
+        <div class="right">
+          <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+          </svg>  agp@my.unt.edu</p>
+        <div class="text">
+
+
+          
+        </div>
+          <div class="tags-container">
+                <span class="tags">Quiet</span>
+                <span class="tags">Introvert</span>
+                <span class="tags">$800-$1000</span>
+                <span class="tags">Night owl</span>
+                <span class="tags">Very clean</span>
+                </div>
+            </div> 
+        </div>
+      </div> <!--end card div-->
+
+      <!-- Bonclay  -->
+      <div class="card" 
+      data-filter-personality="extrovert" 
+      data-filter-commute="thirtymin">
+        <div class="card-header">
+            Bonclavios
+        </div>
+        <div class="card-body text-center">
+            <div class="like-button">
+                <button id="like-btn">
+                    <img src="images/unliked-button.png" alt="Like" class="like-icon">
+                    <div class="like-text">Like</div>
+                  </button>
+            </div>
+        <div class="left">
+            <div class="picture">
+                <img src="images/bonclay.jpeg" alt="user-profile-picture" class="#">
+            </div>
+        </div>
+        
+        <div class="right">
+          <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+          </svg> bonclavios@my.unt.edu</p>
+        <div class="text">
+          
+        </div>
+          <div class="tags-container">
+                <span class="tags">Extrovert</span>
+                <span class="tags">Up to 30 min</span>
+                <span class="tags">6 Months</span>
+                <span class="tags">$800-$1000</span>
+                <span class="tags">No guests</span>
+            </div> 
+        </div>
+      </div> <!--end card div--> 
+      </div>
+
+      <!-- Harry  -->
+      <div class="card" 
+      data-filter-personality="extrovert" 
+      data-filter-commute="twentymin">
+  <div class="card-header">
+      Harry
+  </div>
+  <div class="card-body text-center">
+      <div class="like-button">
+          <button id="like-btn">
+               <img src="images/unliked-button.png" alt="Like" class="like-icon">
+               <div class="like-text">Like</div>
+             </button>
+       </div>
+  <div class="left">
+      <div class="picture">
+          <img src="images/hungry.png" alt="user-profile-picture" class="#">
+      </div>
+  </div>
+  
+  <div class="right">
+    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+    </svg> harry@my.unt.edu</p>
+  <div class="text">
+    
+  </div>
+     <div class="tags-container">
+          <span class="tags">Extrovert</span>
+          <span class="tags">Up to 20 min</span>
+          <span class="tags">Outside&Inside</span>
+          <span class="tags">$800-$1000</span>
+          <span class="tags">Frequent guests</span>
+          <span class="tags">No sharing</span>
+      </div> 
+</div> 
+</div>
+</div><!--end card div-->
+
+<!-- Princess BubbleGum-->
+<div class="card" 
+data-filter-personality="extrovert" 
+data-filter-commute="twentymin">
+    <div class="card-header">
+        Princess BubbleGum
+    </div>
+    <div class="card-body text-center">
+        <div class="like-button">
+            <button id="like-btn">
+                 <img src="images/unliked-button.png" alt="Like" class="like-icon">
+                 <div class="like-text">Like</div>
+               </button>
+         </div>
+    <div class="left">
+        <div class="picture">
+            <img src="images/princess_bubblegum.jpeg" alt="user-profile-picture" class="#">
+        </div>
+    </div>
+    
+    <div class="right">
+      <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+        <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+        <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+      </svg>  princessbubblegum@my.unt.edu</p>
+    <div class="text">
+  
+    </div>
+       <div class="tags-container">
+            <span class="tags">Quiet</span>
+            <span class="tags">Up to 20 min</span>
+            <span class="tags">After midnight</span>
+            <span class="tags">Very clean</span>
+            <span class="tags">Extrovert</span>
+            <span class="tags">Frequent guests</span>
+
+            </div>
+        </div> 
+    </div>
+</div> <!--end card div-->
+
+<!-- Moody Mudi-->
+<div class="card" 
+data-sub-filter="asap" 
+data-filter-commute="twentymin">
+    <div class="card-header">
+        Moody Mudi
+    </div>
+    <div class="card-body text-center">
+        <div class="like-button">
+            <button id="like-btn">
+                 <img src="images/unliked-button.png" alt="Like" class="like-icon">
+                 <div class="like-text">Like</div>
+               </button>
+         </div>
+    <div class="left">
+        <div class="picture">
+            <img src="images/moody_mudi.png" alt="user-profile-picture" class="#">
+        </div>
+    </div>
+    
+    <div class="right">
+      <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+        <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+        <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+      </svg>  moodymudi@my.unt.edu</p>
+    <div class="text">
+     
+    </div>
+       <div class="tags-container">
+            <span class="tags">Quiet</span>
+            <span class="tags">$400-$600</span>
+            <span class="tags">Up to 20 min</span>
+            <span class="tags">Doesn't mind sharing</span>
+            <span class="tags">ASAP</span>
+            <span class="tags">2-3 Months</span>
+
+            </div>
+        </div> 
+    </div>
+</div> <!--end card div-->
+
+
+<!-- Habulla-->
+<div class="card" 
+data-sub-filter="nosharing" 
+data-filter-personality="ambivert">
+  <div class="card-header">
+      Hasbulla
+  </div>
+  <div class="card-body text-center">
+      <div class="like-button">
+          <button id="like-btn">
+               <img src="images/unliked-button.png" alt="Like" class="like-icon">
+               <div class="like-text">Like</div>
+             </button>
+       </div>
+  <div class="left">
+      <div class="picture">
+          <img src="images/hasbulla.jpeg" alt="user-profile-picture" class="#">
+      </div>
+  </div>
+  
+  <div class="right">
+    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+    </svg>  hasbulla@my.unt.edu</p>
+  <div class="text">
+   
+  </div>
+     <div class="tags-container">
+          <span class="tags">Noisy</span>
+          <span class="tags">$600-$800</span>
+          <span class="tags">Ambivert</span>
+          <span class="tags">No sharing</span>
+          <span class="tags">No pets</span>
+          <span class="tags">9PM-10PM</span>
+
+          </div>
+      </div> 
+  </div>
+  </div>
+
+
+
+  <!-- Marceline-->
+  <div class="card" 
+  data-sub-filter="prefersharing" 
+  data-filter-personality="ambivert">
+    <div class="card-header">
+        Marceline
+    </div>
+    <div class="card-body text-center">
+        <div class="like-button">
+            <button id="like-btn">
+                 <img src="images/unliked-button.png" alt="Like" class="like-icon">
+                 <div class="like-text">Like</div>
+               </button>
+         </div>
+    <div class="left">
+        <div class="picture">
+            <img src="images/marceline.jpeg" alt="user-profile-picture" class="#">
+        </div>
+    </div>
+    
+    <div class="right">
+      <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+        <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+        <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+      </svg>  marceline@my.unt.edu</p>
+    <div class="text">
+      
+    </div>
+       <div class="tags-container">
+            <span class="tags">Noisy</span>
+            <span class="tags">Ambivert</span>
+            <span class="tags">Prefers to share</span>
+            <span class="tags">Pet friendly</span>
+            <span class="tags">Occasional guests</span>
+            <span class="tags">After midnight</span>
+
+            </div>
+        </div> 
+    </div>
+</div> <!--end card div-->
+
+
+
+<!-- Natalie Nunn-->
+<div class="card" 
+data-sub-filter="prefersharing" 
+data-filter-personality="ambivert">
+  <div class="card-header">
+      Natalie Nunn
+  </div>
+  <div class="card-body text-center">
+      <div class="like-button">
+          <button id="like-btn">
+               <img src="images/unliked-button.png" alt="Like" class="like-icon">
+               <div class="like-text">Like</div>
+             </button>
+       </div>
+  <div class="left">
+      <div class="picture">
+          <img src="images/natalie_nunn.jpeg" alt="user-profile-picture" class="#">
+      </div>
+  </div>
+  
+  <div class="right">
+    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+    </svg> natalinenunn@my.unt.edu</p>
+  <div class="text">
+      
+  </div>
+     <div class="tags-container">
+          <span class="tags">Noisy</span>
+          <span class="tags">Ambivert</span>`
+          <span class="tags">Prefers to share</span>
+          <span class="tags">Up to 30 min</span>
+          <span class="tags">Frequent guests</span>
+          <span class="tags">10PM-12AM</span>
+
+          </div>
+      </div> 
+  </div>
+</div> <!--end card div-->
+
+<!-- JYP -->
+<div class="card" 
+data-sub-filter="mildnoise" 
+data-filter-commute="fortymin">
+  <div class="card-header">
+      JYP
+  </div>
+  <div class="card-body text-center">
+      <div class="like-button">
+          <button id="like-btn">
+               <img src="images/unliked-button.png" alt="Like" class="like-icon">
+               <div class="like-text">Like</div>
+             </button>
+       </div>
+  <div class="left">
+      <div class="picture">
+          <img src="images/jyp.jpeg" alt="user-profile-picture" class="#">
+      </div>
+  </div>
+  
+  <div class="right">
+    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+    </svg> jyp@my.unt.edu</p>
+  <div class="text">
+    
+  </div>
+     <div class="tags-container">
+          <span class="tags">6 Months</span>
+          <span class="tags">40+ min</span>
+          <span class="tags">Doesn't mind a mess</span>
+          <span class="tags">Outside&Inside</span>
+          <span class="tags">Mild noise</span>
+          </div>
+      </div> 
+  </div>
+</div> <!--end card div-->
+
+<!-- JB -->
+<div class="card" 
+data-sub-filter="asap" 
+data-filter-commute="twentymin">
+  <div class="card-header">
+      JB
+  </div>
+  <div class="card-body text-center">
+      <div class="like-button">
+          <button id="like-btn">
+               <img src="images/unliked-button.png" alt="Like" class="like-icon">
+               <div class="like-text">Like</div>
+             </button>
+       </div>
+  <div class="left">
+      <div class="picture">
+          <img src="images/jb.jpeg" alt="user-profile-picture" class="#">
+      </div>
+  </div>
+  
+  <div class="right">
+    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+    </svg> jb@my.unt.edu</p>
+  <div class="text">
+    
+  </div>
+     <div class="tags-container">
+          <span class="tags">ASAP</span>
+          <span class="tags">Up to 20 min</span>
+          <span class="tags">Early mornings</span>
+          <span class="tags">After midnight</span>
+          </div>
+      </div> 
+  </div>
+</div> <!--end card div-->
+
+<!-- Scrappy -->
+<div class="card" 
+data-sub-filter="mildnoise" 
+data-filter-commute="thirtymin">
+  <div class="card-header">
+      Scrap
+  </div>
+  <div class="card-body text-center">
+      <div class="like-button">
+          <button id="like-btn">
+               <img src="images/unliked-button.png" alt="Like" class="like-icon">
+               <div class="like-text">Like</div>
+             </button>
+       </div>
+  <div class="left">
+      <div class="picture">
+          <img src="images/scrappy.jpeg" alt="user-profile-picture" class="#">
+      </div>
+  </div>
+  
+  <div class="right">
+    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+    </svg> scrappypappy@my.unt.edu</p>
+  <div class="text">
+    
+  </div>
+     <div class="tags-container">
+          <span class="tags">Mild noise</span>
+          <span class="tags">Specific pets only</span>
+          <span class="tags">Clean occasionally</span>
+          <span class="tags">No guests</span>
+          <span class="tags">Up to 30 min</span>
+          </div>
+      </div> 
+  </div>
+</div> <!--end card div-->
+
+<!-- Ij Chukwuma -->
+<div class="card" 
+data-sub-filter="asap" 
+data-filter-personality="extrovert">
+  <div class="card-header">
+      IJ Chukwuma
+  </div>
+  <div class="card-body text-center">
+      <div class="like-button">
+          <button id="like-btn">
+               <img src="images/unliked-button.png" alt="Like" class="like-icon">
+               <div class="like-text">Like</div>
+             </button>
+       </div>
+  <div class="left">
+      <div class="picture">
+          <img src="images/aleis.png" alt="user-profile-picture" class="#">
+      </div>
+  </div>
+  
+  <div class="right">
+    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+    </svg> ijeomachukwuma@my.unt.edu</p>
+  <div class="text">
+    
+  </div>
+     <div class="tags-container">
+          <span class="tags">$800-$1000+</span>
+          <span class="tags">ASAP</span>
+          <span class="tags">Clean occasionally</span>
+          <span class="tags">Extrovert</span>
+          <span class="tags">9PM-10PM</span>
+          </div>
+      </div> 
+  </div>
+</div> <!--end card div-->
+
+
+<!-- Guadalupe -->
+<div class="card" 
+data-sub-filter="mildnoise" 
+data-filter-commute="thirtymin">
+  <div class="card-header">
+      Guadalupe
+  </div>
+  <div class="card-body text-center">
+      <div class="like-button">
+          <button id="like-btn">
+               <img src="images/unliked-button.png" alt="Like" class="like-icon">
+               <div class="like-text">Like</div>
+             </button>
+       </div>
+  <div class="left">
+      <div class="picture">
+          <img src="images/sehun_girl.png" alt="user-profile-picture" class="#">
+      </div>
+  </div>
+  
+  <div class="right">
+    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+    </svg> guadalupe@my.unt.edu</p>
+  <div class="text">
+    
+  </div>
+     <div class="tags-container">
+          <span class="tags">Outside</span>
+          <span class="tags">Extrovert</span>
+          <span class="tags">Mild Noise</span>
+          <span class="tags">Up to 30 min</span>
+          <span class="tags">9PM-10PM</span>
+          </div>
+      </div> 
+  </div>
+</div> <!--end card div-->
+
+
+<!-- Johnny -->
+<div class="card" 
+data-sub-filter="veryclean" 
+data-filter-commute="thirtymin">
+  <div class="card-header">
+      Johnny Lawrence
+  </div>
+  <div class="card-body text-center">
+      <div class="like-button">
+          <button id="like-btn">
+               <img src="images/unliked-button.png" alt="Like" class="like-icon">
+               <div class="like-text">Like</div>
+             </button>
+       </div>
+  <div class="left">
+      <div class="picture">
+          <img src="images/johnny.png" alt="user-profile-picture" class="#">
+      </div>
+  </div>
+  
+  <div class="right">
+    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+    </svg> johnnylawrence@my.unt.edu</p>
+  <div class="text">
+    
+  </div>
+     <div class="tags-container">
+          <span class="tags">Specific pets</span>
+          <span class="tags">Extrovert</span>
+          <span class="tags">Very Clean</span>
+          <span class="tags">Frequent guests</span>
+          <span class="tags">Up to 30 min</span>
+          </div>
+      </div> 
+  </div>
+</div> <!--end card div-->
+
+
+<!-- Alexis Matias -->
+<div class="card" 
+data-sub-filter="veryclean" 
+data-filter-pets="nopets">
+  <div class="card-header">
+      Alexis Matias
+  </div>
+  <div class="card-body text-center">
+      <div class="like-button">
+          <button id="like-btn">
+               <img src="images/unliked-button.png" alt="Like" class="like-icon">
+               <div class="like-text">Like</div>
+             </button>
+       </div>
+  <div class="left">
+      <div class="picture">
+          <img src="images/Umaruu.png" alt="user-profile-picture" class="#">
+      </div>
+  </div>
+  
+  <div class="right">
+    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+    </svg> alexismatias@my.unt.edu</p>
+  <div class="text">
+    
+  </div>
+     <div class="tags-container">
+          <span class="tags">No Pets</span>
+          <span class="tags">Very Clean</span>
+          <span class="tags">Outside&Inside</span>
+          <span class="tags">Frequent guests</span>
+          <span class="tags">Night Owl</span>
+          <span class="tags">Mild noise</span>
+
+          </div>
+      </div> 
+  </div>
+</div> <!--end card div-->
+
+
+<!-- Anita Lizbeth -->
+<div class="card" 
+data-sub-filter="veryclean" 
+data-filter-personality="introvert">
+  <div class="card-header">
+      Anita Lizbeth
+  </div>
+  <div class="card-body text-center">
+      <div class="like-button">
+          <button id="like-btn">
+               <img src="images/unliked-button.png" alt="Like" class="like-icon">
+               <div class="like-text">Like</div>
+             </button>
+       </div>
+  <div class="left">
+      <div class="picture">
+          <img src="images/marth1.jpeg" alt="user-profile-picture" class="#">
+      </div>
+  </div>
+  
+  <div class="right">
+    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+    </svg> anitalizbeth@my.unt.edu</p>
+  <div class="text">
+    
+  </div>
+     <div class="tags-container">
+          <span class="tags">Prefers to share</span>
+          <span class="tags">Very Clean</span>
+          <span class="tags">Early mornings</span>
+          <span class="tags">Introvert</span>
+          <span class="tags">40+ min</span>
+          <span class="tags">1yr</span>
+
+          </div>
+      </div> 
+  </div>
+</div> <!--end card div-->
+
+<!-- David  -->
+<div class="card" 
+data-sub-filter="veryclean" 
+data-filter-personality="ambivert">
+  <div class="card-header">
+      David
+  </div>
+  <div class="card-body text-center">
+      <div class="like-button">
+          <button id="like-btn">
+               <img src="images/unliked-button.png" alt="Like" class="like-icon">
+               <div class="like-text">Like</div>
+             </button>
+       </div>
+  <div class="left">
+      <div class="picture">
+          <img src="images/david.jpeg" alt="user-profile-picture" class="#">
+      </div>
+  </div>
+  
+  <div class="right">
+    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+    </svg> david@my.unt.edu</p>
+  <div class="text">
+    
+  </div>
+     <div class="tags-container">
+          <span class="tags">Outside</span>
+          <span class="tags">Ambivert</span>
+          <span class="tags">Mid-Day</span>
+          <span class="tags">Very Clean</span>
+          <span class="tags">$400-$600</span>
+          
+
+          </div>
+      </div> 
+  </div>
+</div> <!--end card div-->
+
+<!-- Jorge  -->
+<div class="card" 
+data-sub-filter="quiet" 
+data-filter-personality="introvert">
+  <div class="card-header">
+      Jorge Manzana
+  </div>
+  <div class="card-body text-center">
+      <div class="like-button">
+          <button id="like-btn">
+               <img src="images/unliked-button.png" alt="Like" class="like-icon">
+               <div class="like-text">Like</div>
+             </button>
+       </div>
+  <div class="left">
+      <div class="picture">
+          <img src="images/jorge1.jpeg" alt="user-profile-picture" class="#">
+      </div>
+  </div>
+  
+  <div class="right">
+    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+    </svg> jorge@my.unt.edu</p>
+  <div class="text">
+    
+  </div>
+     <div class="tags-container">
+          <span class="tags">Quiet</span>
+          <span class="tags">Introvert</span>
+          <span class="tags">Occasional guests</span>
+          <span class="tags">10PM-12AM</span>
+          <span class="tags">$600-$800</span>
+          </div>
+      </div> 
+  </div>
+</div> <!--end card div-->
+
+
+
+    </div> <!--end of list div-->
+    
+    <style>
+      .hidden {
+        display: none;
+      }
+    
+      .selected {
+        /*background-color: yellow; */
+        border: 2px solid #394D23; /* Green */
+        border-radius: 12px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        
+      }
+
+      .filter-option{
+        margin-top: 0.5rem; 
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+
+      h3{
+        text-align: center;
+      }
+    </style>
+    
+    <script>
+      function toggleFilter(e) {
+        const filterButton = e.target;
+        const filter = filterButton.dataset.filter;
+        const isSelected = filterButton.classList.contains('selected');
+    
+        // Toggle the 'selected' class
+        filterButton.classList.toggle('selected');
+
+        // Toggle the display of sub-filters
+        const subFilters = filterButton.nextElementSibling;
+        if (subFilters) {
+          subFilters.style.display = isSelected ? 'none' : 'block';
+        }
+      }
+    
+      function toggleSubFilter(e) {
+        const subFilterButton = e.target;
+        const subFilter = subFilterButton.dataset.subFilter;
+        const isSelected = subFilterButton.classList.contains('selected');
+    
+        // Toggle the 'selected' class for sub-filters
+        subFilterButton.classList.toggle('selected');
+    
+        // Update the list of selected filters
+        const selectedFilters = getSelectedFilters();
+
+      }
+
+      function getSelectedFilters() {
+        const selectedSubFilterButtons = document.querySelectorAll('.sub-filter-option.selected');
+        return Array.from(selectedSubFilterButtons).map(button => button.dataset.subFilter);
+      }
+
+
+      <!-- Filtering for Profile Cards-->
+      function toggleFilter(e) {
+        const filterButton = e.target;
+        const filter = filterButton.dataset.filter;
+        const isSelected = filterButton.classList.contains('selected');
+
+        // Toggle the 'selected' class for filters
+        filterButton.classList.toggle('selected');
+
+        // Update the list of selected filters
+        const selectedFilters = getSelectedFilters();
+
+        // Filter cards based on selected filters
+        filterCards(selectedFilters);
+
+        // Toggle the display of sub-filters
+        const subFilters = filterButton.nextElementSibling;
+        if (subFilters) {
+          subFilters.style.display = isSelected ? 'none' : 'block';
+        }
+      }
+
+      function toggleSubFilter(e) {
+        const subFilterButton = e.target;
+        const isSelected = subFilterButton.classList.contains('selected');
+
+        // Toggle the 'selected' class for sub-filters
+        subFilterButton.classList.toggle('selected');
+
+        // Update the list of selected filters
+        const selectedFilters = getSelectedFilters();
+
+        // Filter cards based on selected filters
+        filterCards(selectedFilters);
+      }
+
+      function filterCards(filters) {
+  const cards = document.querySelectorAll(".list .card");
+  cards.forEach(card => {
+    const cardFilters = {
+      filter: card.dataset.filter,
+      subFilter: card.dataset.subFilter,
+      personality: card.dataset.filterPersonality ? card.dataset.filterPersonality.split(',') : [],
+      commute: card.dataset.filterCommute ? card.dataset.filterCommute.split(',') : [],
+      // Add other categories as needed
+    };
+    
+
+    
+
+    const shouldShow = filters.every(filter => {
+      return (
+        cardFilters.filter === filter ||
+        cardFilters.subFilter === filter ||
+        cardFilters.personality.includes(filter) ||
+        cardFilters.commute.includes(filter)
+        // Add conditions for other categories
+      );
+    });
+
+    shouldShow ? showCard(card) : hideCard(card);
+  });
+}
+
+      function showCard(card) {
+        card.classList.remove('hidden');
+        const cardContent = card.querySelector('.card-body');
+        if (cardContent) {
+          cardContent.classList.remove('hidden');
+        }
+      }
+
+      function hideCard(card) {
+        card.classList.add('hidden');
+        const cardContent = card.querySelector('.card-body');
+        if (cardContent) {
+          cardContent.classList.add('hidden');
+        }
+      }
+
+
+      //Like Button Script
+      const likeButton = document.getElementById('like-btn');
+      const likeIcon = document.querySelector('.like-icon');
+      
+      let liked = false; // Initial state
+      
+      likeButton.addEventListener('click', () => {
+        liked = !liked; // Toggle the state
+      
+        if (liked) {
+          likeIcon.src = 'images/liked-button.png'; // Change to the liked image
+        } else {
+          likeIcon.src = 'images/unliked-button.png'; // Change back to the heart image
+        }
+      });
+    </script>
+    
+  </main>
+
+
+
+    <!--Home Page Footer:-->
+  <footer class="footer text-lg-start">
+    <div class="text-center p-3">
+        <!--links in footer section-->
+        <section class="">
+            <div class= "row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0" >
+                    <a class="Terms link-dark" href="/about">About</a> 
+                </div>
+    
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <a class="Privacy Policy link-dark" href="/faq">FAQ</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <a class="FAQ link-dark" href="/Terms">Terms and Conditions</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <a class="contact-us link-dark" href="/contact">Contact Us</a>
+                </div>
+            </div>
+        </section>
+  </footer>
+
+
+
+
+
+</body>
+</html>

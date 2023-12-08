@@ -1,0 +1,327 @@
+body{
+  margin: 0;
+  font-size: .9rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #2E4214;
+  text-align: left;
+  background-color: #E0EDD4;
+  font-family: 'Barlow', sans-serif;
+  display: flex;
+ flex-direction: column;
+  padding: 0;
+  min-height: 400px;
+  margin-bottom: 100px;
+  clear: both;
+    
+}
+
+/* Navbar Style */
+.navbar{
+  background-color: #c8d7b9;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  color: #342D2D;
+  font-weight:900
+}
+
+main{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  }
+
+/* Footer Style */
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #342D2D;
+  background-color:#c8d7b9;
+  
+}
+
+/*For search bar label, label below the search bar on home page*/
+#search-bar-label-css{
+padding-top: 30px;
+  color: #342D2D;
+  font-style: italic;
+  font-weight: 800;
+}
+#h3-search-bar-label{
+padding-top: 20px;
+color: #342D2D;
+font-weight: 500; 
+}
+/*
+.container{
+/* padding-top: 300px;
+width: 100%;
+flex-direction: row;
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+align-items: flex-start;
+}
+*/
+/*For profile cards*/
+
+/*.wrapper {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+}*/
+
+
+.card {
+/*display: inline-block;*/
+  min-height: 400px;
+  height: 400px;
+  /*min-width: 300px;*/
+  width: 350px;
+ /* margin-right: 10px;*/
+  background-color: white;
+  margin: 10px; /* Add spacing between cards */
+  border: 1px solid #ccc;
+  overflow: auto;
+  white-space: normal; 
+  text-align: center;
+  /*flex: 1 1 calc(20% - 100px);*/
+  box-sizing: border-box;
+}
+
+
+.card-body{
+  display: flex; /* Use flex layout for the card body */
+  justify-content: space-between; /* Arrange items in a row with space between them */
+  align-items: center; /* Vertically center items */
+  padding: 40px;
+  flex-direction: column;
+  /*flex-grow: 1;
+  width: 100%;*/
+  height: 100%;
+  padding: /*30px*/ 40px;
+  box-sizing: border-box;
+}   
+
+
+.card-header {
+      color: #2E4214;
+      background-color: #c8d7b9;
+      text-align: center;
+      font-weight: 900;
+      height: auto;
+}
+.picture {
+width: 100px; /* Adjust the width and height to your desired circle size */
+height: 100px;
+border-radius: 50%; /* Makes the container circular */
+overflow: hidden;
+justify-content: center;
+}
+.picture img {
+width: 100%; /* Makes the image fill the circular container */
+height: 100%; /* Makes the image fill the circular container */
+object-fit: cover;
+align-items: center;
+}
+
+.text {
+  padding-top: 20px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  
+  max-height: 300px;
+  max-width: 300px;
+  box-sizing: border-box;
+
+}
+.text p {
+  font-size: 16px; /* Set a specific font size for headings */
+  max-width: 100%; /* Ensure the text doesn't exceed the container width */
+  overflow: hidden; /* Hide overflow text if it exceeds the container */
+  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow-wrap: break-word;
+}
+
+.tags{
+  display: inline-block;
+  border: 2px solid #394D23; /* Border around the squoval */
+  color: #394D23; /* Text color matches the border color */
+  border-radius: 15px; /* Controls the roundness of corners (adjust as needed) */
+  font-weight: bold;
+  font-size: 12px; /* Adjust font size to fit within the shape */
+  line-height: 30px; /* Center the text vertically */
+  text-align: center; /* Center the text horizontally */
+  padding: 5px; /* Add padding to keep the text inside */
+  margin-right: 10px; /* Adds spacing between squoval tags */
+  margin-top: 5px;
+ 
+  }
+ .tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: auto;
+ }
+ .like-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: right;
+ padding-top: 50px;
+  
+}
+
+#like-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  
+}
+
+.like-icon {
+  width: 50px; /* Adjust the size of the heart icon */
+  height: 50px;
+}
+.like-text {
+  font-size: 14px; /* Adjust the font size as needed */
+
+}
+
+/*Media query for mobile view */
+@media screen and (max-width: 1000px) {
+.card {
+  flex: 1 1 calc(100% - 20px); /* Make cards take full width on small screens */
+}
+}
+
+/*filter tags css*/
+
+.filterDiv {
+display: flex;  /* Display buttons in a line */
+justify-content: space-between;
+margin-right: 10px; 
+float: left;
+background-color: transparent;
+color: #ffffff;
+text-align: center;
+margin: 2px;
+
+}
+
+.show {
+display: block;
+}
+
+.container {
+margin-top: 20px;
+overflow: hidden;
+}
+
+/* Style the buttons */
+.btn {
+display: inline-block;  /* Display buttons in a line */
+margin-right: 10px;
+border: none;
+outline: none;
+padding: 12px 16px;
+background-color: #f1f1f1;
+cursor: pointer;
+}
+
+.btn:hover {
+background-color: #ddd;
+}
+
+.btn.active {
+background-color: #666;
+color: white;
+}
+.hide {
+display: none;
+}
+.filter-option {
+  text-align: center;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  border-radius: 10px; /* Adjust border-radius to round the corners */
+  margin-right: 10px; /* Adjust margin for spacing between buttons */
+  margin-bottom: 10px;
+  width: 100px;
+  height: 90px;
+
+}
+
+.filter-option:hover {
+  background-color: #ddd;
+}
+
+.filter-option.active {
+  background-color: #666;
+  color: white;
+}
+
+/*second layer buttons*/
+.dropdown {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  margin-bottom: 10px; /* Adjust margin between dropdowns */
+  flex-direction: column;
+  text-align: center;
+}
+
+.sub-filter-option {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 100px;
+
+}
+
+.filter-option:hover, .sub-filter-option:hover {
+  background-color: #ddd;
+}
+
+.filter-option.active, .sub-filter-option.active {
+  background-color: #666;
+  color: white;
+
+}
+
+/*css for results*/
+.list {
+  /* Add styles for the results container */
+  clear: both; /* Clear both left and right floats */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* or any other value based on your preference */
+}
